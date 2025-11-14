@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Champions League Prediction</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #041018;
+        --panel: #0b1620;
+        --muted: #9fb3c3;
+        --text: #eaf6f9;
+        --accent: #17c3b2;
+        --radius: 12px;
+        --maxw: 1100px;
+      }
+      section {
+        scroll-margin-top: 100px;
+        padding-top: 20px;
+        margin-bottom: 60px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #021018 0%, #03121a 100%);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .site {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 18px;
+      }
+
+      header {
+        position: sticky;
+        top: 14px;
+        margin: 14px auto;
+        z-index: 60;
+        backdrop-filter: blur(6px);
+        background: rgba(2, 8, 12, 0.45);
+        border-radius: 12px;
+        padding: 10px 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        max-width: var(--maxw);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--accent), #0a8ea0);
+        color: #042;
+      }
+      .brand .title {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+      }
+
+      .hero {
+        height: 55vh;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+        overflow: hidden;
+        margin: 18px 0;
+        box-shadow: 0 14px 50px rgba(117, 175, 203, 0.6);
+        background-image: url("1397076.jpg");
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(2, 10, 14, 0.55),
+          rgba(2, 10, 14, 0.45)
+        );
+        z-index: 0;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        margin-left: 6%;
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 58%;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 18px;
+        border-radius: 12px;
+      }
+      .hero-title {
+        margin: 0;
+        font-size: clamp(28px, 6.2vw, 64px);
+        line-height: 0.98;
+        letter-spacing: -1px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .hero-sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      main {
+        padding: 12px 0 40px 0;
+        max-width: var(--maxw);
+        margin: 0 auto;
+      }
+      .container {
+        padding: 22px 18px;
+      }
+
+      .section-title {
+        font-size: 18px;
+        color: var(--text);
+        margin: 0 0 8px 0;
+      }
+      .section-sub {
+        color: var(--muted);
+        margin: 0 0 16px 0;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .step {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        margin-top: 6px;
+        flex: 0 0 12px;
+      }
+      .step .card {
+        background: var(--panel);
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.02);
+        color: var(--muted);
+      }
+
+      .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .result {
+        padding: 12px;
+        border-radius: 10px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.01),
+          rgba(255, 255, 255, 0)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.02);
+        color: var(--muted);
+      }
+      .result h5 {
+        margin: 0 0 6px 0;
+        color: var(--text);
+      }
+      .result img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 8px;
+      }
+
+      .contact {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 12px;
+        border-radius: 10px;
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.02);
+      }
+      .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #0b8ea0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        color: #022;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        margin-top: 28px;
+        font-size: 13px;
+        padding-bottom: 24px;
+      }
+
+      @media (max-width: 1000px) {
+        .hero {
+          height: auto;
+          min-height: 380px;
+          background-position: center top;
+        }
+        .hero-content {
+          max-width: 86%;
+          margin-left: 6%;
+        }
+        .results {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-content {
+          max-width: 92%;
+          margin-left: 4%;
+        }
+        .hero-title {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="mark">CL</div>
+            <div>
+              <div class="title">Champions League Prediction</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Research project 2025-2026
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="#method">Method</a>
+            <a href="#results">Results</a>
+            <a href="#notebook">Notebook</a>
+            <a
+              href="#contact"
+              style="
+                background: var(--accent);
+                color: #042;
+                padding: 8px 10px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+              "
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero" role="region" aria-label="Intro">
+        <div class="hero-content">
+          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
+          <p class="hero-sub">
+            A machine learning project to estimate club win probabilities and
+            project top scorers, assist leaders, and player of the season for
+            the 2025–26 Champions League.
+          </p>
+        </div>
+      </section>
+
+      <main>
+        <div class="container">
+          <!-- Method -->
+          <section id="method" aria-label="Method">
+            <h3 class="section-title">Method (summary)</h3>
+            <div class="timeline">
+              <div class="step">
+                <div class="dot"></div>
+                <div class="card">
+                  <strong>Collect</strong> — gather historical UCL matches,
+                  domestic league stats, and squad lists.
+                </div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div class="card">
+                  <strong>Engineer</strong> — build features for teams and
+                  players, normalize names, handle missing data.
+                </div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div class="card">
+                  <strong>Train</strong> — fit ML models, cross-validate,
+                  measure scoring.
+                </div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div class="card">
+                  <strong>Simulate</strong> — Monte Carlo simulations to
+                  aggregate match probabilities and player stats.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Results -->
+          <section id="results" aria-label="Results preview">
+            <h3 class="section-title">Results preview</h3>
+            <p class="section-sub">Main outputs</p>
+            <div class="results">
+              <div class="result">
+                <h5>Top favorite</h5>
+                <p><strong>FC Example</strong> — 21.4% win probability</p>
+                <img
+                  src="fig_final.png"
+                  alt="Final figure showing predicted probabilities"
+                />
+              </div>
+              <div class="result">
+                <h5>Projected top scorer</h5>
+                <p><strong>Example</strong> — 8.1 expected goals</p>
+              </div>
+              <div class="result">
+                <h5>Projected top assister</h5>
+                <p><strong>Example</strong> — 6.3 expected assists</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Notebook -->
+          <section id="notebook" aria-label="Python Notebook">
+            <h3 class="section-title">Full Python Notebook</h3>
+            <p class="section-sub">
+              All code, data processing, and analysis steps.
+            </p>
+            <p>
+              <a
+                href="notebook/CL_prediction_notebook.ipynb"
+                target="_blank"
+                style="color: var(--accent); text-decoration: underline"
+                >Download or open the notebook</a
+              >
+            </p>
+            <iframe
+              src="notebook/CL_prediction_notebook.ipynb"
+              style="width: 100%; height: 600px; border: none"
+            ></iframe>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" aria-label="Contact">
+            <h3 class="section-title">Contact & credits</h3>
+            <p class="section-sub">CAUX Wedrik-Odal — CPES / PSL</p>
+            <div class="contact">
+              <div class="avatar">YN</div>
+              <div>
+                <p style="margin: 0; color: var(--muted)">
+                  Email:
+                  <strong style="color: var(--text)"
+                    >wedrik-odal.caux@psl.eu</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 — Caux Wedrik-Odal — Champions League 2025-2026 Prediction
+      </footer>
+    </div>
+  </body>
+</html>
