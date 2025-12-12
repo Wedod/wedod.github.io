@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Champions League Prediction - Immersif</title>
+    <title>Champions League Prediction </title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
@@ -55,12 +55,12 @@
         margin: 14px auto;
         z-index: 60;
         backdrop-filter: blur(6px);
-        background: rgba(2, 8, 12, 0.6); /* Légèrement plus opaque */
+        background: rgba(2, 8, 12, 0.6);
         border-radius: 12px;
         padding: 10px 12px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Ombre plus intense */
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         max-width: var(--maxw);
-        border: 1px solid rgba(255, 255, 255, 0.05); /* Bordure subtile */
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
       .nav {
         display: flex;
@@ -112,11 +112,10 @@
         overflow: hidden;
         margin: 18px 0;
         box-shadow: 0 14px 50px rgba(117, 175, 203, 0.5);
-        background-image: url("1397076.jpg"); /* Assurez-vous que l'image est présente */
+        background-image: url("1397076.jpg");
         background-size: cover;
         background-position: center center;
 
-        /* ⭐ EFFET PARALLAXE IMMERSIF ⭐ */
         background-attachment: fixed;
 
         position: relative;
@@ -129,7 +128,7 @@
         background: linear-gradient(
           180deg,
           rgba(2, 10, 14, 0.7),
-          /* Opacité augmentée */ rgba(2, 10, 14, 0.6)
+          rgba(2, 10, 14, 0.6)
         );
         z-index: 0;
       }
@@ -142,10 +141,9 @@
         flex-direction: column;
         gap: 12px;
         max-width: 58%;
-        background: rgba(0, 0, 0, 0.65); /* Fond légèrement plus sombre */
+        background: rgba(0, 0, 0, 0.65); 
         padding: 18px;
         border-radius: 12px;
-        /* Ombre douce pour séparer du fond */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
       }
       .hero-title {
@@ -173,7 +171,7 @@
       }
 
       .section-title {
-        font-size: 24px; /* Un peu plus grand */
+        font-size: 24px;
         color: var(--text);
         margin: 0 0 8px 0;
         font-weight: 800;
@@ -188,22 +186,22 @@
       .timeline {
         display: flex;
         flex-direction: column;
-        gap: 16px; /* Espace augmenté */
+        gap: 16px;
         margin-bottom: 20px;
       }
       .step {
         display: flex;
-        gap: 18px; /* Espace augmenté */
+        gap: 18px;
         align-items: flex-start;
       }
       .dot {
-        width: 14px; /* Plus grand */
+        width: 14px;
         height: 14px;
         border-radius: 50%;
         background: var(--accent);
         margin-top: 6px;
         flex: 0 0 14px;
-        box-shadow: 0 0 8px var(--accent); /* Petit éclat lumineux */
+        box-shadow: 0 0 8px var(--accent);
       }
       .step .card {
         background: var(--panel);
@@ -213,7 +211,7 @@
         color: var(--muted);
         width: 100%;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
-          -5px -5px 10px rgba(255, 255, 255, 0.01); /* Effet doux */
+          -5px -5px 10px rgba(255, 255, 255, 0.01);
       }
 
       /* --- Résultats (Grille dynamique) --- */
@@ -240,23 +238,20 @@
       }
 
       .results {
-        /* ⭐ NOUVEAU : Grille auto-fit pour la flexibilité ⭐ */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 16px; /* Espacement amélioré */
+        gap: 16px;
         margin-bottom: 20px;
       }
       .result {
-        padding: 18px; /* Padding augmenté */
+        padding: 18px;
         border-radius: 10px;
         background: var(--panel);
         border: 1px solid rgba(255, 255, 255, 0.05);
         color: var(--muted);
-        /* Ombre pour la profondeur */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       }
-      /* ⭐ Effet de survol immersif ⭐ */
       .result:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 30px rgba(117, 175, 203, 0.3);
@@ -277,7 +272,7 @@
       /* --- Contact et Footer --- */
       .contact {
         display: flex;
-        gap: 16px; /* Espacement augmenté */
+        gap: 16px;
         align-items: center;
         padding: 16px;
         border-radius: 10px;
@@ -287,7 +282,7 @@
       .avatar {
         width: 64px;
         height: 64px;
-        border-radius: 50%; /* Arrondi total */
+        border-radius: 50%;
         background: linear-gradient(135deg, var(--accent), #0b8ea0);
         display: flex;
         align-items: center;
@@ -311,14 +306,13 @@
           height: auto;
           min-height: 400px;
           background-position: center top;
-          background-attachment: scroll; /* Désactiver le parallaxe sur petit écran */
+          background-attachment: scroll; 
         }
         .hero-content {
           max-width: 86%;
           margin-left: 6%;
         }
         .results {
-          /* Garde la flexibilité mais assure une colonne si l'écran est trop petit */
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
         .nav {
@@ -360,8 +354,8 @@
             </div>
           </div>
           <nav aria-label="Main navigation">
-            <a href="#method">Méthode</a>
-            <a href="#results">Résultats</a>
+            <a href="#method">Method</a>
+            <a href="#results">Results</a>
             <a href="#notebook">Notebook</a>
             <a
               href="#contact"
@@ -382,12 +376,11 @@
 
       <section class="hero" role="region" aria-label="Intro">
         <div class="hero-content">
-          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PRÉDICTION</h1>
+          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
           <p class="hero-sub">
-            Un projet de machine learning pour estimer les probabilités de
-            victoire des clubs et projeter les meilleurs buteurs, passeurs
-            décisifs, et joueur de la saison pour la Ligue des Champions
-            2025–26.
+            A machine learning project to estimate club win probabilities and
+            project top scorers, assist leaders, and player of the season for
+            the 2025–26 Champions League.
           </p>
         </div>
       </section>
@@ -395,90 +388,74 @@
       <main>
         <div class="container">
           <section id="method" aria-label="Method">
-            <h3 class="section-title">Méthode (résumé)</h3>
+            <h3 class="section-title">Method (summary)</h3>
             <div class="timeline">
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Collecte</strong> — Rassemblement des données
-                  historiques de l'UCL, statistiques des championnats
-                  domestiques, et listes d'équipes.
+                  <strong>Collect</strong> — gather historical UCL matches,
+                  leaderbords, and squad lists.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Ingénierie de données</strong> — Construction des
-                  caractéristiques (features) des équipes et des joueurs,
-                  normalisation des noms, gestion des données manquantes.
+                  <strong>Engineer</strong> — build features for teams and
+                  players, normalize names, handle missing data.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Entraînement</strong> — Ajustement des modèles ML (par
-                  exemple, régression logistique et boosting), validation
-                  croisée, mesure de la précision.
+                  <strong>Train</strong> — fit ML models, cross-validate,
+                  measure scoring.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Simulation</strong> — Simulations Monte Carlo pour
-                  agréger les probabilités de match et les statistiques des
-                  joueurs sur l'ensemble du tournoi.
+                  <strong>Simulate</strong> — Monte Carlo simulations to
+                  aggregate match probabilities and player stats.
                 </div>
               </div>
             </div>
           </section>
 
           <section id="results" aria-label="Results preview">
-            <h3 class="section-title">Aperçu des Résultats</h3>
-            <p class="section-sub">
-              Utilisez les contrôles ci-dessous pour trier les projections.
-            </p>
+            <h3 class="section-title">Results preview</h3>
 
             <div class="results-controls">
-              <button>Probabilité de victoire</button>
-              <button>Meilleurs Buteurs</button>
-              <button>Meilleurs Passeurs</button>
+              <button>Win Probability</button>
+              <button>Projected MVP</button>
+              <button>Projected top sorer</button>
             </div>
 
             <div class="results">
               <div class="result">
-                <h5>Favori Principal</h5>
+                <h5>Main Favorite</h5>
                 <p><strong>FC Example</strong> — 21.4% de probabilité</p>
                 <img
-                  src="fig_final.png"
+                  src="output.png"
                   alt="Figure finale montrant les probabilités prédites"
                 />
               </div>
               <div class="result">
-                <h5>Meilleur Buteur Projeté</h5>
-                <p><strong>Example Player X</strong> — 8.1 buts attendus</p>
-                <p style="font-size: 13px; color: var(--accent)">
-                  Détails : Basé sur xG/90 min et la profondeur du parcours
-                  simulé.
-                </p>
+                <h5>Projected top scorer</h5>
+                <p><strong>Example Player X</strong> — 8.1 expected goals</p>
               </div>
               <div class="result">
-                <h5>Meilleur Passeur Projeté</h5>
+                <h5>Projected top assister</h5>
                 <p>
-                  <strong>Example Player Y</strong> — 6.3 passes décisives
-                  attendues
-                </p>
-                <p style="font-size: 13px; color: var(--accent)">
-                  Détails : Basé sur xA/90 min et le rôle de l'équipe.
+                  <strong>Example Player Y</strong> — 6.3 expected assists
                 </p>
               </div>
             </div>
           </section>
 
           <section id="notebook" aria-label="Python Notebook">
-            <h3 class="section-title">Notebook Python Complet</h3>
+            <h3 class="section-title">Full Python Notebook</h3>
             <p class="section-sub">
-              Tout le code, le traitement des données et les étapes d'analyse.
-            </p>
+              All code, data processing, and analysis steps.            </p>
             <p>
               <a
                 href="/Users/wed/Documents/cours L3 2025-2026/projet de recherche encadre/MVP CAUX Wedrik-Odal/notebook/MVP_Prediction.ipynb"
@@ -488,7 +465,7 @@
                   text-decoration: underline;
                   font-weight: 600;
                 "
-                >Télécharger ou ouvrir le notebook</a
+                >Download or open the notebook</a
               >
             </p>
             <iframe
@@ -505,7 +482,7 @@
           </section>
 
           <section id="contact" aria-label="Contact">
-            <h3 class="section-title">Contact & Crédits</h3>
+            <h3 class="section-title">Contact & Credits</h3>
             <p class="section-sub">CAUX Wedrik-Odal — CPES / PSL</p>
             <div class="contact">
               <div class="avatar">WC</div>
@@ -515,10 +492,6 @@
                   <strong style="color: var(--text)"
                     >wedrik-odal.caux@psl.eu</strong
                   >
-                </p>
-                <p style="margin: 4px 0 0 0; font-size: 14px">
-                  N'hésitez pas à me contacter pour toute question sur la
-                  méthodologie ou le code.
                 </p>
               </div>
             </div>
