@@ -338,6 +338,34 @@
           margin: 8px auto;
         }
       }
+      .popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 10px black;
+}
     </style>
   </head>
   <body>
@@ -433,7 +461,7 @@
             <div class="results">
               <div class="result">
                 <h5>Main Favorite</h5>
-                <p><strong>FC Example</strong> — 21.4% de probabilité</p>
+                <p><strong>Arsenal FC</strong> — 11.32% of final win probability</p>
                 <img
                   src="output.png"
                   alt="Figure finale montrant les probabilités prédites"
@@ -502,5 +530,36 @@
         © 2025 — Caux Wedrik-Odal — Champions League 2025-2026 Prediction
       </footer>
     </div>
+    <!-- ————————————————
+     POPUP IMAGE EN GRAND
+——————————————— -->
+<div id="img-popup" class="popup">
+  <span class="close">&times;</span>
+  <img id="popup-img" class="popup-content" />
+</div>
+
+<script>
+  // Sélection de l'image dans la section "Main Favorite"
+  const smallImg = document.querySelector('.result img');
+  const popup = document.getElementById('img-popup');
+  const popupImg = document.getElementById('popup-img');
+  const closeBtn = document.querySelector('.close');
+
+  // Quand on clique sur la petite image
+  smallImg.addEventListener('click', () => {
+    popup.style.display = "flex";
+    popupImg.src = smallImg.src;
+  });
+
+  // Quand on clique sur la croix
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = "none";
+  });
+
+  // Quand on clique en dehors de l'image
+  popup.addEventListener('click', (event) => {
+    if (event.target === popup) popup.style.display = "none";
+  });
+</script>
   </body>
 </html>
