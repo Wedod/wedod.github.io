@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Champions League Prediction</title>
+    <title>Champions League Prediction - Immersif</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
@@ -11,6 +11,7 @@
     />
 
     <style>
+      /* --- Variables et base --- */
       :root {
         --bg: #041018;
         --panel: #0b1620;
@@ -47,17 +48,19 @@
         padding: 18px;
       }
 
+      /* --- Header et Navigation --- */
       header {
         position: sticky;
         top: 14px;
         margin: 14px auto;
         z-index: 60;
         backdrop-filter: blur(6px);
-        background: rgba(2, 8, 12, 0.45);
+        background: rgba(2, 8, 12, 0.6); /* Légèrement plus opaque */
         border-radius: 12px;
         padding: 10px 12px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Ombre plus intense */
         max-width: var(--maxw);
+        border: 1px solid rgba(255, 255, 255, 0.05); /* Bordure subtile */
       }
       .nav {
         display: flex;
@@ -92,24 +95,30 @@
         padding: 8px 10px;
         border-radius: 8px;
         font-weight: 600;
+        transition: all 0.2s;
       }
       nav a:hover {
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(255, 255, 255, 0.05);
         color: var(--text);
       }
 
+      /* --- Section Hero (Introduction) --- */
       .hero {
         height: 55vh;
-        min-height: 320px;
+        min-height: 380px;
         display: flex;
         align-items: center;
         border-radius: 14px;
         overflow: hidden;
         margin: 18px 0;
-        box-shadow: 0 14px 50px rgba(117, 175, 203, 0.6);
-        background-image: url("1397076.jpg");
+        box-shadow: 0 14px 50px rgba(117, 175, 203, 0.5);
+        background-image: url("1397076.jpg"); /* Assurez-vous que l'image est présente */
         background-size: cover;
         background-position: center center;
+
+        /* ⭐ EFFET PARALLAXE IMMERSIF ⭐ */
+        background-attachment: fixed;
+
         position: relative;
         border: 1px solid rgba(255, 255, 255, 0.03);
       }
@@ -119,8 +128,8 @@
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(2, 10, 14, 0.55),
-          rgba(2, 10, 14, 0.45)
+          rgba(2, 10, 14, 0.7),
+          /* Opacité augmentée */ rgba(2, 10, 14, 0.6)
         );
         z-index: 0;
       }
@@ -133,9 +142,11 @@
         flex-direction: column;
         gap: 12px;
         max-width: 58%;
-        background: rgba(0, 0, 0, 0.55);
+        background: rgba(0, 0, 0, 0.65); /* Fond légèrement plus sombre */
         padding: 18px;
         border-radius: 12px;
+        /* Ombre douce pour séparer du fond */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
       }
       .hero-title {
         margin: 0;
@@ -162,74 +173,113 @@
       }
 
       .section-title {
-        font-size: 18px;
+        font-size: 24px; /* Un peu plus grand */
         color: var(--text);
         margin: 0 0 8px 0;
+        font-weight: 800;
+        letter-spacing: -0.5px;
       }
       .section-sub {
         color: var(--muted);
         margin: 0 0 16px 0;
       }
 
+      /* --- Méthode (Timeline) --- */
       .timeline {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px; /* Espace augmenté */
         margin-bottom: 20px;
       }
       .step {
         display: flex;
-        gap: 12px;
+        gap: 18px; /* Espace augmenté */
         align-items: flex-start;
       }
       .dot {
-        width: 12px;
-        height: 12px;
+        width: 14px; /* Plus grand */
+        height: 14px;
         border-radius: 50%;
         background: var(--accent);
         margin-top: 6px;
-        flex: 0 0 12px;
+        flex: 0 0 14px;
+        box-shadow: 0 0 8px var(--accent); /* Petit éclat lumineux */
       }
       .step .card {
         background: var(--panel);
-        padding: 12px;
+        padding: 16px;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
         color: var(--muted);
+        width: 100%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+          -5px -5px 10px rgba(255, 255, 255, 0.01); /* Effet doux */
+      }
+
+      /* --- Résultats (Grille dynamique) --- */
+      .results-controls {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+      .results-controls button {
+        padding: 8px 15px;
+        border-radius: 6px;
+        background: var(--panel);
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+      .results-controls button:hover {
+        background: var(--accent);
+        color: #042;
+        box-shadow: 0 0 10px var(--accent);
       }
 
       .results {
+        /* ⭐ NOUVEAU : Grille auto-fit pour la flexibilité ⭐ */
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px; /* Espacement amélioré */
         margin-bottom: 20px;
       }
       .result {
-        padding: 12px;
+        padding: 18px; /* Padding augmenté */
         border-radius: 10px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.01),
-          rgba(255, 255, 255, 0)
-        );
-        border: 1px solid rgba(255, 255, 255, 0.02);
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.05);
         color: var(--muted);
+        /* Ombre pour la profondeur */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      /* ⭐ Effet de survol immersif ⭐ */
+      .result:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(117, 175, 203, 0.3);
+        border-color: var(--accent);
       }
       .result h5 {
         margin: 0 0 6px 0;
         color: var(--text);
+        font-size: 18px;
       }
       .result img {
         width: 100%;
-        border-radius: 10px;
-        margin-top: 8px;
+        border-radius: 8px;
+        margin-top: 12px;
+        opacity: 0.9;
       }
 
+      /* --- Contact et Footer --- */
       .contact {
         display: flex;
-        gap: 12px;
+        gap: 16px; /* Espacement augmenté */
         align-items: center;
-        padding: 12px;
+        padding: 16px;
         border-radius: 10px;
         background: var(--panel);
         border: 1px solid rgba(255, 255, 255, 0.02);
@@ -237,13 +287,14 @@
       .avatar {
         width: 64px;
         height: 64px;
-        border-radius: 10px;
+        border-radius: 50%; /* Arrondi total */
         background: linear-gradient(135deg, var(--accent), #0b8ea0);
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 800;
         color: #022;
+        font-size: 24px;
       }
 
       footer {
@@ -254,18 +305,28 @@
         padding-bottom: 24px;
       }
 
+      /* --- Media Queries --- */
       @media (max-width: 1000px) {
         .hero {
           height: auto;
-          min-height: 380px;
+          min-height: 400px;
           background-position: center top;
+          background-attachment: scroll; /* Désactiver le parallaxe sur petit écran */
         }
         .hero-content {
           max-width: 86%;
           margin-left: 6%;
         }
         .results {
-          grid-template-columns: 1fr;
+          /* Garde la flexibilité mais assure une colonne si l'écran est trop petit */
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .nav nav {
+          margin-top: 10px;
         }
       }
       @media (max-width: 480px) {
@@ -275,6 +336,12 @@
         }
         .hero-title {
           font-size: 28px;
+        }
+        .site {
+          padding: 12px;
+        }
+        header {
+          margin: 8px auto;
         }
       }
     </style>
@@ -293,8 +360,8 @@
             </div>
           </div>
           <nav aria-label="Main navigation">
-            <a href="#method">Method</a>
-            <a href="#results">Results</a>
+            <a href="#method">Méthode</a>
+            <a href="#results">Résultats</a>
             <a href="#notebook">Notebook</a>
             <a
               href="#contact"
@@ -305,6 +372,7 @@
                 border-radius: 8px;
                 text-decoration: none;
                 font-weight: 700;
+                box-shadow: 0 0 15px rgba(23, 195, 178, 0.4);
               "
               >Contact</a
             >
@@ -314,108 +382,143 @@
 
       <section class="hero" role="region" aria-label="Intro">
         <div class="hero-content">
-          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
+          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PRÉDICTION</h1>
           <p class="hero-sub">
-            A machine learning project to estimate club win probabilities and
-            project top scorers, assist leaders, and player of the season for
-            the 2025–26 Champions League.
+            Un projet de machine learning pour estimer les probabilités de
+            victoire des clubs et projeter les meilleurs buteurs, passeurs
+            décisifs, et joueur de la saison pour la Ligue des Champions
+            2025–26.
           </p>
         </div>
       </section>
 
       <main>
         <div class="container">
-          <!-- Method -->
           <section id="method" aria-label="Method">
-            <h3 class="section-title">Method (summary)</h3>
+            <h3 class="section-title">Méthode (résumé)</h3>
             <div class="timeline">
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Collect</strong> — gather historical UCL matches,
-                  domestic league stats, and squad lists.
+                  <strong>Collecte</strong> — Rassemblement des données
+                  historiques de l'UCL, statistiques des championnats
+                  domestiques, et listes d'équipes.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Engineer</strong> — build features for teams and
-                  players, normalize names, handle missing data.
+                  <strong>Ingénierie de données</strong> — Construction des
+                  caractéristiques (features) des équipes et des joueurs,
+                  normalisation des noms, gestion des données manquantes.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Train</strong> — fit ML models, cross-validate,
-                  measure scoring.
+                  <strong>Entraînement</strong> — Ajustement des modèles ML (par
+                  exemple, régression logistique et boosting), validation
+                  croisée, mesure de la précision.
                 </div>
               </div>
               <div class="step">
                 <div class="dot"></div>
                 <div class="card">
-                  <strong>Simulate</strong> — Monte Carlo simulations to
-                  aggregate match probabilities and player stats.
+                  <strong>Simulation</strong> — Simulations Monte Carlo pour
+                  agréger les probabilités de match et les statistiques des
+                  joueurs sur l'ensemble du tournoi.
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- Results -->
           <section id="results" aria-label="Results preview">
-            <h3 class="section-title">Results preview</h3>
-            <p class="section-sub">Main outputs</p>
+            <h3 class="section-title">Aperçu des Résultats</h3>
+            <p class="section-sub">
+              Utilisez les contrôles ci-dessous pour trier les projections.
+            </p>
+
+            <div class="results-controls">
+              <button>Probabilité de victoire</button>
+              <button>Meilleurs Buteurs</button>
+              <button>Meilleurs Passeurs</button>
+            </div>
+
             <div class="results">
               <div class="result">
-                <h5>Top favorite</h5>
-                <p><strong>FC Example</strong> — 21.4% win probability</p>
+                <h5>Favori Principal</h5>
+                <p><strong>FC Example</strong> — 21.4% de probabilité</p>
                 <img
                   src="fig_final.png"
-                  alt="Final figure showing predicted probabilities"
+                  alt="Figure finale montrant les probabilités prédites"
                 />
               </div>
               <div class="result">
-                <h5>Projected top scorer</h5>
-                <p><strong>Example</strong> — 8.1 expected goals</p>
+                <h5>Meilleur Buteur Projeté</h5>
+                <p><strong>Example Player X</strong> — 8.1 buts attendus</p>
+                <p style="font-size: 13px; color: var(--accent)">
+                  Détails : Basé sur xG/90 min et la profondeur du parcours
+                  simulé.
+                </p>
               </div>
               <div class="result">
-                <h5>Projected top assister</h5>
-                <p><strong>Example</strong> — 6.3 expected assists</p>
+                <h5>Meilleur Passeur Projeté</h5>
+                <p>
+                  <strong>Example Player Y</strong> — 6.3 passes décisives
+                  attendues
+                </p>
+                <p style="font-size: 13px; color: var(--accent)">
+                  Détails : Basé sur xA/90 min et le rôle de l'équipe.
+                </p>
               </div>
             </div>
           </section>
 
-          <!-- Notebook -->
           <section id="notebook" aria-label="Python Notebook">
-            <h3 class="section-title">Full Python Notebook</h3>
+            <h3 class="section-title">Notebook Python Complet</h3>
             <p class="section-sub">
-              All code, data processing, and analysis steps.
+              Tout le code, le traitement des données et les étapes d'analyse.
             </p>
             <p>
               <a
-                href="notebook/CL_prediction_notebook.ipynb"
+                href="/Users/wed/Documents/cours L3 2025-2026/projet de recherche encadre/MVP CAUX Wedrik-Odal/notebook/MVP_Prediction.ipynb"
                 target="_blank"
-                style="color: var(--accent); text-decoration: underline"
-                >Download or open the notebook</a
+                style="
+                  color: var(--accent);
+                  text-decoration: underline;
+                  font-weight: 600;
+                "
+                >Télécharger ou ouvrir le notebook</a
               >
             </p>
             <iframe
-              src="notebook/CL_prediction_notebook.ipynb"
-              style="width: 100%; height: 600px; border: none"
+              src="/Users/wed/Documents/cours L3 2025-2026/projet de recherche encadre/MVP CAUX Wedrik-Odal/notebook/MVP_Prediction.ipynb"
+              title="Aperçu du Notebook Python"
+              style="
+                width: 100%;
+                height: 600px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                margin-top: 15px;
+              "
             ></iframe>
           </section>
 
-          <!-- Contact -->
           <section id="contact" aria-label="Contact">
-            <h3 class="section-title">Contact & credits</h3>
+            <h3 class="section-title">Contact & Crédits</h3>
             <p class="section-sub">CAUX Wedrik-Odal — CPES / PSL</p>
             <div class="contact">
-              <div class="avatar">YN</div>
+              <div class="avatar">WC</div>
               <div>
                 <p style="margin: 0; color: var(--muted)">
                   Email:
                   <strong style="color: var(--text)"
                     >wedrik-odal.caux@psl.eu</strong
                   >
+                </p>
+                <p style="margin: 4px 0 0 0; font-size: 14px">
+                  N'hésitez pas à me contacter pour toute question sur la
+                  méthodologie ou le code.
                 </p>
               </div>
             </div>
