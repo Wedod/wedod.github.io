@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Results – Champions League Prediction</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="mark">CL</div>
+            <div>
+              <div class="title">Champions League Prediction</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Research project 2025–2026
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('method') }}">Method</a>
+            <a href="{{ url_for('results') }}" class="nav-active">Results</a>
+            <a href="{{ url_for('files') }}">Files</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <section id="results" aria-label="Detailed results">
+            <h3 class="section-title">Detailed results</h3>
+            <p class="section-sub">
+              Explore the predictions for title winner, top scorer, top assist
+              provider and player of the tournament (PotT).
+            </p>
+
+            <div class="results-switch">
+              <button data-chart="winner" class="active">Winner</button>
+              <button data-chart="top_scorer">Top scorer</button>
+              <button data-chart="top_assist">Top assist</button>
+              <button data-chart="mvp">PotT</button>
+            </div>
+
+            <div id="results-chart"></div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 — Caux Wedrik-Odal — Champions League 2025–2026 Prediction
+      </footer>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      const winnerData    = {{ winner_data | tojson }};
+      const topScorerData = {{ top_scorer_data | tojson }};
+      const topAssistData = {{ top_assist_data | tojson }};
+      const mvpData       = {{ mvp_data | tojson }};
+
+      function renderBarChart({
+          containerId,
+          data,
+          yKey,
+          valueKey,
+          logoKey,
+          leftLabel,
+          rightLabel,
+          gradientId,
+          isPercent = true
+        }) {
+          const margin = { top: 20, right: 120, bottom: 40, left: 385 },
+                width  = 1200 - margin.left - margin.right,
+                height = 600 - margin.top - margin.bottom;
+
+          const container = d3.select(containerId);
+          container.selectAll("*").remove();
+
+          const svg = container
+            .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+              .attr("transform", `translate(${margin.left},${margin.top})`);
+
+          container.select("svg")
+            .style("border-radius", "12px")
+            .style("background", "#07141f");
+
+          const defs = svg.append("defs");
+          const gradient = defs.append("linearGradient")
+            .attr("id", gradientId)
+            .attr("x1", "0%").attr("x2", "100%")
+            .attr("y1", "0%").attr("y2", "0%");
+          gradient.append("stop").attr("offset", "0%").attr("stop-color", "#0b6d80");
+          gradient.append("stop").attr("offset", "100%").attr("stop-color", "#17c3b2");
+
+          const maxVal = d3.max(data, d => d[valueKey]);
+          const x = d3.scaleLinear().domain([0, maxVal]).range([0, width]);
+          const y = d3.scaleBand().domain(data.map(d => d[yKey])).range([0, height]).padding(0.2);
+
+          const logoSize = 22;
+          if (logoKey && data[0][logoKey]) {
+            svg.selectAll("image.logo")
+              .data(data)
+              .enter()
+              .append("image")
+                .attr("class", "logo")
+                .attr("href", d => `/static/images/logos/${d[logoKey]}`)
+                .attr("x", -logoSize - 20)
+                .attr("y", d => y(d[yKey]) + (y.bandwidth() - logoSize) / 2)
+                .attr("width", logoSize)
+                .attr("height", logoSize);
+          }
+
+          const xAxis = d3.axisBottom(x)
+            .ticks(6)
+            .tickFormat(d => isPercent ? d + "%" : d);
+
+          svg.selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+              .attr("y", d => y(d[yKey]))
+              .attr("height", y.bandwidth())
+              .attr("x", 0)
+              .attr("width", d => x(d[valueKey]))
+              .attr("fill", `url(#${gradientId})`)
+              .attr("rx", 4).attr("ry", 4);
+
+          svg.selectAll("text.left-label")
+            .data(data)
+            .enter()
+            .append("text")
+              .attr("class", "left-label")
+              .attr("x", -logoSize - 60)
+              .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
+              .attr("dy", "0.35em")
+              .attr("text-anchor", "end")
+              .attr("fill", "#eaf6f9")
+              .style("font-size", "12px")
+              .text(leftLabel);
+
+          svg.selectAll("text.right-label")
+            .data(data)
+            .enter()
+            .append("text")
+              .attr("class", "right-label")
+              .attr("x", d => x(d[valueKey]) + 6)
+              .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
+              .attr("dy", "0.35em")
+              .attr("fill", "#eaf6f9")
+              .style("font-size", "11px")
+              .text(rightLabel);
+
+          svg.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(xAxis)
+            .selectAll("text")
+              .style("fill", "#9fb3c3")
+              .style("font-size", "11px");
+
+          svg.append("g")
+            .attr("class", "grid")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""))
+            .selectAll("line")
+              .attr("stroke", "#1f2a36")
+              .attr("stroke-dasharray", "2,2");
+        }
+
+          function showWinner() {
+          renderBarChart({
+          containerId: "#results-chart",
+          data: winnerData,
+          yKey: "team",
+          valueKey: "prob",
+          logoKey: "logo",
+          gradientId: "winnerGradient",
+          leftLabel: d => `${d.rank}. ${d.team}`,
+          rightLabel: d => `${d.prob}%`
+              });
+              }
+
+          function showTopScorer() {
+          renderBarChart({
+          containerId: "#results-chart",
+          data: topScorerData,
+          yKey: "player",
+          valueKey: "prob",
+          logoKey: "logo",
+          gradientId: "scorerGradient",
+          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+          rightLabel: d => `${d.prob}% – ${d.goals.toFixed(1)} goals`
+          });
+          }
+
+          function showTopAssist() {
+          renderBarChart({
+          containerId: "#results-chart",
+          data: topAssistData,
+          yKey: "player",
+          valueKey: "prob",
+          logoKey: "logo",
+          gradientId: "assistGradient",
+          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+          rightLabel: d => `${d.prob}% – ${d.assists.toFixed(1)} assists`
+          });
+          }
+
+          function showMVP() {
+          renderBarChart({
+          containerId: "#results-chart",
+          data: mvpData,
+          yKey: "player",
+          valueKey: "score",
+          logoKey: "logo",
+          gradientId: "mvpGradient",
+          isPercent: false,
+          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+          rightLabel: d => d.score.toFixed(3)
+                      });
+                    }
+                    document.querySelectorAll(".results-switch button").forEach(btn => {
+                      btn.addEventListener("click", () => {
+                        document.querySelectorAll(".results-switch button").forEach(b => b.classList.remove("active"));
+                        btn.classList.add("active");
+
+                        const chartType = btn.dataset.chart;
+                        if (chartType === "winner")      showWinner();
+                        else if (chartType === "top_scorer") showTopScorer();
+                        else if (chartType === "top_assist") showTopAssist();
+                        else if (chartType === "mvp")    showMVP();
+                      });
+                    });
+                    showWinner();
+    </script>
+  </body>
+</html>

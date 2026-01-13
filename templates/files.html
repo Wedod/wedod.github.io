@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Files – Champions League Prediction</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="mark">CL</div>
+            <div>
+              <div class="title">Champions League Prediction</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Research project 2025–2026
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('method') }}">Method</a>
+            <a href="{{ url_for('results') }}">Results</a>
+            <a href="{{ url_for('files') }}" class="nav-active">Files</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <section id="files" aria-label="Project files">
+            <h3 class="section-title">Project files</h3>
+            <p class="section-sub">
+              Notebook and input datasets used to build the predictions.
+            </p>
+
+            <div class="method-card">
+              <div class="method-item">
+                <div class="method-bullet">📓</div>
+                <div class="method-text">
+                  <strong>Jupyter notebook</strong>
+                  <p>
+                    Full Python code for data processing, model training,
+                    feature engineering and Monte Carlo simulations.
+                  </p>
+                  <a
+                    href="{{ url_for('static', filename='data/notebook/ucl_prediction_notebook.ipynb') }}"
+                    download
+                  >
+                    Download (.ipynb)
+                  </a>
+                </div>
+              </div>
+              <div class="method-item">
+                <div class="method-bullet">📊</div>
+                <div class="method-text">
+                  <strong>Complete match history</strong>
+                  <p>
+                    All Champions League matches played since 1996. Raw dataset
+                    with match details, scores and team information.
+                  </p>
+                  <a
+                    href="{{ url_for('static', filename='data/raw/champions_league_total_cleaned.csv') }}"
+                    download
+                  >
+                    Download (.csv)
+                  </a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-bullet">⚽</div>
+                <div class="method-text">
+                  <strong>Team‑level data</strong>
+                  <p>
+                    Historical rankings and team statistics since 1996-97 used
+                    as features for the match outcome prediction model.
+                  </p>
+                  <a
+                    href="{{ url_for('static', filename='data/raw/fbref-total-UCL_cleaned.csv') }}"
+                    download
+                  >
+                    Download (.csv)
+                  </a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-bullet">👥</div>
+                <div class="method-text">
+                  <strong>Player‑level data</strong>
+                  <p>
+                    Player statistics (minutes, goals, assists, xG/xA) used for
+                    top scorer, top assist and player of the tournament
+                    projections.
+                  </p>
+                  <a
+                    href="{{ url_for('static', filename='data/raw/Stat_players_UCL.csv') }}"
+                    download
+                  >
+                    Download (.csv)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 — Caux Wedrik-Odal — Champions League 2025–2026 Prediction
+      </footer>
+    </div>
+  </body>
+</html>

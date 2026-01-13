@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Method – Champions League Prediction</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="mark">CL</div>
+            <div>
+              <div class="title">Champions League Prediction</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Research project 2025–2026
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('method') }}" class="nav-active">Method</a>
+            <a href="{{ url_for('results') }}">Results</a>
+            <a href="{{ url_for('files') }}">Files</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <section id="method" aria-label="Method">
+            <h3 class="section-title">Methodology</h3>
+            <p class="section-sub">
+              How the data was collected, transformed and modeled to produce the
+              predictions.
+            </p>
+
+            <div class="method-card">
+              <div class="method-item">
+                <div class="method-bullet">1</div>
+                <div class="method-text">
+                  <strong>Data collection</strong>
+                  <p>
+                    Match and team data were scraped from FBref, strictly
+                    following the site’s usage and scraping guidelines. The
+                    dataset includes full UEFA Champions League standings for
+                    every season from 1996/97 up to the matches played on 10
+                    December 2025, as well as player‑level statistics for all
+                    participants from the 2020/21 season onwards.
+                  </p>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-bullet">2</div>
+                <div class="method-text">
+                  <strong>Feature engineering</strong>
+                  <p>
+                    We built simple team features to describe how strong each
+                    side had been in the Champions League so far, such as goals
+                    scored and conceded per match before each game. We also
+                    cleaned team and player names for consistency and added a
+                    manual flags (matches missed due to injuries in 2025/26) so
+                    that the models could use the same identifiers and context
+                    across all datasets.
+                  </p>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-bullet">3</div>
+                <div class="method-text">
+                  <strong>Model and simulation</strong>
+                  <p>
+  The project uses two layers: a match prediction model, then a simulation layer
+  that plays out full seasons and aggregates results for teams and players.
+</p>
+<p>
+To predict match outcomes, we trained a multinomial logistic regression model on historical Champions League games, using only information available before kick‑off (home/away team, season, and pre‑match attacking/defensive stats such as goals scored and conceded per match). The model outputs probabilities for each result (home win, draw, away win) instead of a single hard prediction.
+</p>
+<p>
+  These match probabilities feed a Monte Carlo simulation of complete seasons: for each run, every remaining game is resolved at random according to the predicted probabilities, the league table is rebuilt, and a simple knock‑out bracket is played to obtain a champion. Repeating this process thousands of times yields an estimated probability of winning the Champions League for each team.
+</p>
+<p>
+  For players, we build Poisson models for season‑end goals and assists using expected goals, expected assists and projected minutes, then simulate many “alternate seasons” to see how often each player finishes as top scorer or top provider. Finally, we define a player of the tournament score that combines a player’s projected attacking output (goals and assists, adjusted for playing time) with the simulated title chances of his club, so that a high player of the tournament score corresponds to “big individual numbers in a team that has a real shot at winning the competition”.
+</p>
+                </div>
+              </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 — Caux Wedrik-Odal — Champions League 2025–2026 Prediction
+      </footer>
+    </div>
+  </body>
+</html>
