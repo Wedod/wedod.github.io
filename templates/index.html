@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Champions League Prediction - Immersif</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="mark">CL</div>
+            <div>
+              <div class="title">Champions League Prediction</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Research project 2025-2026
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="{{ url_for('index') }}" class="nav-active">Home</a>
+            <a href="{{ url_for('method') }}">Method</a>
+            <a href="{{ url_for('results') }}">Results</a>
+            <a href="{{ url_for('files') }}">Files</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero" role="region" aria-label="Intro">
+        <div class="hero-content">
+          <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
+          <p class="hero-sub">
+            A probabilistic model that simulates the entire UEFA Champions
+            League season to estimate each team’s title chances and key player
+            awards (top scorer, top assist, player of the tournament). It
+            combines historical and current performance data with Monte Carlo
+            simulations to generate data-driven forecasts for clubs and players
+          </p>
+        </div>
+      </section>
+
+      <main>
+        <div class="container">
+          <section aria-label="Overview of the results">
+            <h3 class="section-title">Overview of the results</h3>
+            <p class="section-sub">
+              The chart below shows the predicted win probability for the first
+              20 clubs.
+            </p>
+
+            <div id="ucl-winner-chart"></div>
+          </section>
+
+          <section id="contact" aria-label="Contact">
+            <h3 class="section-title">Contact & Credits</h3>
+            <p class="section-sub">CAUX Wedrik-Odal — CPES / PSL</p>
+            <div class="contact">
+              <div class="avatar">WC</div>
+              <div>
+                <p style="margin: 0; color: var(--muted)">
+                  Email:
+                  <strong style="color: var(--text)"
+                    >wedrik-odal.caux@psl.eu</strong
+                  >
+                </p>
+                <p style="margin: 4px 0 0 0; font-size: 14px">
+                  Do not hesitate to contact me for any questions about the
+                  methodology or the code.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 — Caux Wedrik-Odal — Champions League 2025-2026 Prediction
+      </footer>
+    </div>
+    <script>
+      const winData = {{ win_data | tojson }};
+
+      const margin = { top: 10, right: 60, bottom: 20, left: 200 },
+            width  = 1100 - margin.left - margin.right,
+            height = 550 - margin.top - margin.bottom;
+
+      const container = d3.select("#ucl-winner-chart");
+
+      const svg = container
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      // background panel
+      container.select("svg")
+        .style("border-radius", "12px")
+        .style("background", "#07141f");
+
+      const defs = svg.append("defs");
+
+      const gradient = defs.append("linearGradient")
+        .attr("id", "winGradient")
+        .attr("x1", "0%")
+        .attr("x2", "100%")
+        .attr("y1", "0%")
+        .attr("y2", "0%");
+
+      gradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#0b6d80");
+
+      gradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#17c3b2");
+
+      const maxProb = d3.max(winData, d => d.prob);
+
+      const x = d3.scaleLinear()
+        .domain([0, maxProb])
+        .range([0, width]);
+
+      const y = d3.scaleBand()
+        .domain(winData.map(d => d.team))
+        .range([0, height])
+        .padding(0.2);
+
+      const logoSize = 22;
+
+      svg.selectAll("image.logo")
+        .data(winData)
+        .enter()
+        .append("image")
+        .attr("class", "logo")
+        .attr("href", d => `/static/images/logos/${d.logo}`)
+        .attr("x", -logoSize - 50)
+        .attr("y", d => y(d.team) + (y.bandwidth() - logoSize) / 2)
+        .attr("width", logoSize)
+        .attr("height", logoSize);
+
+
+      // bars
+      svg.selectAll("rect")
+        .data(winData)
+        .enter()
+        .append("rect")
+          .attr("y", d => y(d.team))
+          .attr("height", y.bandwidth())
+          .attr("x", 0)
+          .attr("width", d => x(d.prob))
+          .attr("fill", "url(#winGradient)")
+          .attr("rx", 4)
+          .attr("ry", 4);
+
+      // team + rank labels
+      svg.selectAll("text.team-label")
+        .data(winData)
+        .enter()
+        .append("text")
+          .attr("class", "team-label")
+          .attr("x", -logoSize - 60)
+          .attr("y", d => y(d.team) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", "end")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "12px")
+          .text(d => `${d.rank}. ${d.team}`);
+
+      // probability labels
+      svg.selectAll("text.prob-label")
+        .data(winData)
+        .enter()
+        .append("text")
+          .attr("class", "prob-label")
+          .attr("x", d => x(d.prob) + 6)
+          .attr("y", d => y(d.team) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "11px")
+          .text(d => d.prob + "%");
+
+      // x-axis
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(
+          d3.axisBottom(x)
+            .ticks(6)
+            .tickFormat(d => d + "%")
+        )
+        .selectAll("text")
+          .style("fill", "#9fb3c3")
+          .style("font-size", "11px");
+
+      // gridlines
+      svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", `translate(0,${height})`)
+        .call(
+          d3.axisBottom(x)
+            .ticks(6)
+            .tickSize(-height)
+            .tickFormat("")
+        )
+        .selectAll("line")
+          .attr("stroke", "#1f2a36")
+          .attr("stroke-dasharray", "2,2");
+    </script>
+  </body>
+</html>
