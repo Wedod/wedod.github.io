@@ -1,0 +1,11 @@
+Player,Team,Pos,Performance_Ast,lambda_final_assists,TopAssist_Prob,LogoFile
+Achraf Hakimi,Paris S-G,DF,3,5.831995485799782,0.13428519841269834,Paris S-G.png
+Pierre-Emerick Aubameyang,Marseille,FW,4,5.333762350615714,0.08613566849816869,Marseille.png
+Serge Gnabry,Bayern Munich,"FW,MF",3,5.2472644475796235,0.08022781135531146,Bayern Munich.png
+Kenan Yıldız,Juventus,MF,3,4.84675628733424,0.05513670634920632,Juventus.png
+Michael Olise,Bayern Munich,"FW,MF",3,4.631673605991761,0.048616898656898576,Bayern Munich.png
+Dominik Szoboszlai,Liverpool,"MF,DF",3,4.590915839361648,0.04549380952380948,Liverpool.png
+Tijjani Reijnders,Manchester City,MF,3,4.617804160352165,0.04531563492063486,Manchester City.png
+Kevin De Bruyne,Napoli,"MF,FW",2,4.610153163389356,0.04237547619047613,Napoli.png
+Konrad Laimer,Bayern Munich,DF,3,4.564821105317767,0.04076293040293036,Bayern Munich.png
+Martín Zubimendi,Arsenal,MF,2,4.293880503851376,0.03097611111111108,Arsenal.png
