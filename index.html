@@ -1,373 +1,19 @@
-@<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Champions League Prediction </title>
+    <title>Champions League Prediction - Immersif</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      /* --- Variables et base --- */
-      :root {
-        --bg: #041018;
-        --panel: #0b1620;
-        --muted: #9fb3c3;
-        --text: #eaf6f9;
-        --accent: #17c3b2;
-        --radius: 12px;
-        --maxw: 1100px;
-      }
-      section {
-        scroll-margin-top: 100px;
-        padding-top: 20px;
-        margin-bottom: 60px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        font-family: Inter, Arial, Helvetica, sans-serif;
-        background: linear-gradient(180deg, #021018 0%, #03121a 100%);
-        color: var(--text);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      .site {
-        max-width: var(--maxw);
-        margin: 0 auto;
-        padding: 18px;
-      }
-
-      /* --- Header et Navigation --- */
-      header {
-        position: sticky;
-        top: 14px;
-        margin: 14px auto;
-        z-index: 60;
-        backdrop-filter: blur(6px);
-        background: rgba(2, 8, 12, 0.6);
-        border-radius: 12px;
-        padding: 10px 12px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-        max-width: var(--maxw);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .mark {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--accent), #0a8ea0);
-        color: #042;
-      }
-      .brand .title {
-        font-size: 15px;
-        font-weight: 700;
-        margin: 0;
-      }
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-        padding: 8px 10px;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: all 0.2s;
-      }
-      nav a:hover {
-        background: rgba(255, 255, 255, 0.05);
-        color: var(--text);
-      }
-
-      /* --- Section Hero (Introduction) --- */
-      .hero {
-        height: 55vh;
-        min-height: 380px;
-        display: flex;
-        align-items: center;
-        border-radius: 14px;
-        overflow: hidden;
-        margin: 18px 0;
-        box-shadow: 0 14px 50px rgba(117, 175, 203, 0.5);
-        background-image: url("1397076.jpg");
-        background-size: cover;
-        background-position: center center;
-
-        background-attachment: fixed;
-
-        position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.03);
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(2, 10, 14, 0.7),
-          rgba(2, 10, 14, 0.6)
-        );
-        z-index: 0;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 1;
-        margin-left: 6%;
-        color: var(--text);
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        max-width: 58%;
-        background: rgba(0, 0, 0, 0.65); 
-        padding: 18px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      }
-      .hero-title {
-        margin: 0;
-        font-size: clamp(28px, 6.2vw, 64px);
-        line-height: 0.98;
-        letter-spacing: -1px;
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-      .hero-sub {
-        margin: 0;
-        color: var(--muted);
-        font-size: 16px;
-        line-height: 1.6;
-      }
-
-      main {
-        padding: 12px 0 40px 0;
-        max-width: var(--maxw);
-        margin: 0 auto;
-      }
-      .container {
-        padding: 22px 18px;
-      }
-
-      .section-title {
-        font-size: 24px;
-        color: var(--text);
-        margin: 0 0 8px 0;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .section-sub {
-        color: var(--muted);
-        margin: 0 0 16px 0;
-      }
-
-      /* --- Méthode (Timeline) --- */
-      .timeline {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 20px;
-      }
-      .step {
-        display: flex;
-        gap: 18px;
-        align-items: flex-start;
-      }
-      .dot {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: var(--accent);
-        margin-top: 6px;
-        flex: 0 0 14px;
-        box-shadow: 0 0 8px var(--accent);
-      }
-      .step .card {
-        background: var(--panel);
-        padding: 16px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        color: var(--muted);
-        width: 100%;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
-          -5px -5px 10px rgba(255, 255, 255, 0.01);
-      }
-
-      /* --- Résultats (Grille dynamique) --- */
-      .results-controls {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-      }
-      .results-controls button {
-        padding: 8px 15px;
-        border-radius: 6px;
-        background: var(--panel);
-        color: var(--text);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.2s;
-      }
-      .results-controls button:hover {
-        background: var(--accent);
-        color: #042;
-        box-shadow: 0 0 10px var(--accent);
-      }
-
-      .results {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 16px;
-        margin-bottom: 20px;
-      }
-      .result {
-        padding: 18px;
-        border-radius: 10px;
-        background: var(--panel);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        color: var(--muted);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      }
-      .result:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(117, 175, 203, 0.3);
-        border-color: var(--accent);
-      }
-      .result h5 {
-        margin: 0 0 6px 0;
-        color: var(--text);
-        font-size: 18px;
-      }
-      .result img {
-        width: 100%;
-        border-radius: 8px;
-        margin-top: 12px;
-        opacity: 0.9;
-      }
-
-      /* --- Contact et Footer --- */
-      .contact {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        padding: 16px;
-        border-radius: 10px;
-        background: var(--panel);
-        border: 1px solid rgba(255, 255, 255, 0.02);
-      }
-      .avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--accent), #0b8ea0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        color: #022;
-        font-size: 24px;
-      }
-
-      footer {
-        text-align: center;
-        color: var(--muted);
-        margin-top: 28px;
-        font-size: 13px;
-        padding-bottom: 24px;
-      }
-
-      /* --- Media Queries --- */
-      @media (max-width: 1000px) {
-        .hero {
-          height: auto;
-          min-height: 400px;
-          background-position: center top;
-          background-attachment: scroll; 
-        }
-        .hero-content {
-          max-width: 86%;
-          margin-left: 6%;
-        }
-        .results {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-        .nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .nav nav {
-          margin-top: 10px;
-        }
-      }
-      @media (max-width: 480px) {
-        .hero-content {
-          max-width: 92%;
-          margin-left: 4%;
-        }
-        .hero-title {
-          font-size: 28px;
-        }
-        .site {
-          padding: 12px;
-        }
-        header {
-          margin: 8px auto;
-        }
-      }
-      .popup {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.popup-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  text-shadow: 0 0 10px black;
-}
-    </style>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
     <div class="site">
@@ -383,22 +29,10 @@
             </div>
           </div>
           <nav aria-label="Main navigation">
-            <a href="#method">Method</a>
-            <a href="#results">Results</a>
-            <a href="#notebook">Notebook</a>
-            <a
-              href="#contact"
-              style="
-                background: var(--accent);
-                color: #042;
-                padding: 8px 10px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 700;
-                box-shadow: 0 0 15px rgba(23, 195, 178, 0.4);
-              "
-              >Contact</a
-            >
+            <a href="{{ url_for('index') }}" class="nav-active">Home</a>
+            <a href="{{ url_for('method') }}">Method</a>
+            <a href="{{ url_for('results') }}">Results</a>
+            <a href="{{ url_for('files') }}">Files</a>
           </nav>
         </div>
       </header>
@@ -407,106 +41,25 @@
         <div class="hero-content">
           <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
           <p class="hero-sub">
-            A machine learning project to estimate club win probabilities and
-            project top scorers, assist leaders, and player of the season for
-            the 2025–26 Champions League.
+            A probabilistic model that simulates the entire UEFA Champions
+            League season to estimate each team’s title chances and key player
+            awards (top scorer, top assist, player of the tournament). It
+            combines historical and current performance data with Monte Carlo
+            simulations to generate data-driven forecasts for clubs and players
           </p>
         </div>
       </section>
 
       <main>
         <div class="container">
-          <section id="method" aria-label="Method">
-            <h3 class="section-title">Method (summary)</h3>
-            <div class="timeline">
-              <div class="step">
-                <div class="dot"></div>
-                <div class="card">
-                  <strong>Collect</strong> — gather historical UCL matches,
-                  leaderbords, and squad lists.
-                </div>
-              </div>
-              <div class="step">
-                <div class="dot"></div>
-                <div class="card">
-                  <strong>Engineer</strong> — build features for teams and
-                  players, normalize names, handle missing data.
-                </div>
-              </div>
-              <div class="step">
-                <div class="dot"></div>
-                <div class="card">
-                  <strong>Train</strong> — fit ML models, cross-validate,
-                  measure scoring.
-                </div>
-              </div>
-              <div class="step">
-                <div class="dot"></div>
-                <div class="card">
-                  <strong>Simulate</strong> — Monte Carlo simulations to
-                  aggregate match probabilities and player stats.
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="results" aria-label="Results preview">
-            <h3 class="section-title">Results preview</h3>
-
-            <div class="results-controls">
-              <button>Win Probability</button>
-              <button>Projected MVP</button>
-              <button>Projected top sorer</button>
-            </div>
-
-            <div class="results">
-              <div class="result">
-                <h5>Main Favorite</h5>
-                <p><strong>Arsenal FC</strong> — 11.32% of final win probability</p>
-                <img
-                  src="output.png"
-                  alt="Figure finale montrant les probabilités prédites"
-                />
-              </div>
-              <div class="result">
-                <h5>Projected MVP</h5>
-                <p><strong>Example Player X</strong> — 38% probability</p>
-              </div>
-              <div class="result">
-                <h5>Projected top scorer</h5>
-                <p>
-                  <strong>Example Player Y</strong> — 8.1 expected goals</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="notebook" aria-label="Python Notebook">
-            <h3 class="section-title">Full Python Notebook</h3>
+          <section aria-label="Overview of the results">
+            <h3 class="section-title">Overview of the results</h3>
             <p class="section-sub">
-              All code, data processing, and analysis steps.</p>
-            <p>
-              <a
-                href="/Users/wed/Documents/cours L3 2025-2026/projet de recherche encadre/MVP CAUX Wedrik-Odal/notebook/MVP_Prediction.ipynb"
-                target="_blank"
-                style="
-                  color: var(--accent);
-                  text-decoration: underline;
-                  font-weight: 600;
-                "
-                >Download or open the notebook</a
-              >
+              The chart below shows the predicted win probability for the first
+              20 clubs.
             </p>
-            <iframe
-              src="/Users/wed/Documents/cours L3 2025-2026/projet de recherche encadre/MVP CAUX Wedrik-Odal/notebook/MVP_Prediction.ipynb"
-              title="Aperçu du Notebook Python"
-              style="
-                width: 100%;
-                height: 600px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 10px;
-                margin-top: 15px;
-              "
-            ></iframe>
+
+            <div id="ucl-winner-chart"></div>
           </section>
 
           <section id="contact" aria-label="Contact">
@@ -521,6 +74,10 @@
                     >wedrik-odal.caux@psl.eu</strong
                   >
                 </p>
+                <p style="margin: 4px 0 0 0; font-size: 14px">
+                  Do not hesitate to contact me for any questions about the
+                  methodology or the code.
+                </p>
               </div>
             </div>
           </section>
@@ -531,36 +88,134 @@
         © 2025 — Caux Wedrik-Odal — Champions League 2025-2026 Prediction
       </footer>
     </div>
-    <!-- ————————————————
-     POPUP IMAGE EN GRAND
-——————————————— -->
-<div id="img-popup" class="popup">
-  <span class="close">&times;</span>
-  <img id="popup-img" class="popup-content" />
-</div>
+    <script>
+      const winData = {{ win_data | tojson }};
 
-<script>
-  // Sélection de l'image dans la section "Main Favorite"
-  const smallImg = document.querySelector('.result img');
-  const popup = document.getElementById('img-popup');
-  const popupImg = document.getElementById('popup-img');
-  const closeBtn = document.querySelector('.close');
+      const margin = { top: 10, right: 60, bottom: 20, left: 200 },
+            width  = 1100 - margin.left - margin.right,
+            height = 550 - margin.top - margin.bottom;
 
-  // Quand on clique sur la petite image
-  smallImg.addEventListener('click', () => {
-    popup.style.display = "flex";
-    popupImg.src = smallImg.src;
-  });
+      const container = d3.select("#ucl-winner-chart");
 
-  // Quand on clique sur la croix
-  closeBtn.addEventListener('click', () => {
-    popup.style.display = "none";
-  });
+      const svg = container
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
 
-  // Quand on clique en dehors de l'image
-  popup.addEventListener('click', (event) => {
-    if (event.target === popup) popup.style.display = "none";
-  });
-</script>
+      // background panel
+      container.select("svg")
+        .style("border-radius", "12px")
+        .style("background", "#07141f");
+
+      const defs = svg.append("defs");
+
+      const gradient = defs.append("linearGradient")
+        .attr("id", "winGradient")
+        .attr("x1", "0%")
+        .attr("x2", "100%")
+        .attr("y1", "0%")
+        .attr("y2", "0%");
+
+      gradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#0b6d80");
+
+      gradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#17c3b2");
+
+      const maxProb = d3.max(winData, d => d.prob);
+
+      const x = d3.scaleLinear()
+        .domain([0, maxProb])
+        .range([0, width]);
+
+      const y = d3.scaleBand()
+        .domain(winData.map(d => d.team))
+        .range([0, height])
+        .padding(0.2);
+
+      const logoSize = 22;
+
+      svg.selectAll("image.logo")
+        .data(winData)
+        .enter()
+        .append("image")
+        .attr("class", "logo")
+        .attr("href", d => `/static/images/logos/${d.logo}`)
+        .attr("x", -logoSize - 50)
+        .attr("y", d => y(d.team) + (y.bandwidth() - logoSize) / 2)
+        .attr("width", logoSize)
+        .attr("height", logoSize);
+
+
+      // bars
+      svg.selectAll("rect")
+        .data(winData)
+        .enter()
+        .append("rect")
+          .attr("y", d => y(d.team))
+          .attr("height", y.bandwidth())
+          .attr("x", 0)
+          .attr("width", d => x(d.prob))
+          .attr("fill", "url(#winGradient)")
+          .attr("rx", 4)
+          .attr("ry", 4);
+
+      // team + rank labels
+      svg.selectAll("text.team-label")
+        .data(winData)
+        .enter()
+        .append("text")
+          .attr("class", "team-label")
+          .attr("x", -logoSize - 60)
+          .attr("y", d => y(d.team) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", "end")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "12px")
+          .text(d => `${d.rank}. ${d.team}`);
+
+      // probability labels
+      svg.selectAll("text.prob-label")
+        .data(winData)
+        .enter()
+        .append("text")
+          .attr("class", "prob-label")
+          .attr("x", d => x(d.prob) + 6)
+          .attr("y", d => y(d.team) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "11px")
+          .text(d => d.prob + "%");
+
+      // x-axis
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(
+          d3.axisBottom(x)
+            .ticks(6)
+            .tickFormat(d => d + "%")
+        )
+        .selectAll("text")
+          .style("fill", "#9fb3c3")
+          .style("font-size", "11px");
+
+      // gridlines
+      svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", `translate(0,${height})`)
+        .call(
+          d3.axisBottom(x)
+            .ticks(6)
+            .tickSize(-height)
+            .tickFormat("")
+        )
+        .selectAll("line")
+          .attr("stroke", "#1f2a36")
+          .attr("stroke-dasharray", "2,2");
+    </script>
   </body>
 </html>
