@@ -37,6 +37,7 @@
         </div>
       </header>
 
+      <!-- Introductory hero section describing the project and its objectives -->
       <section class="hero" role="region" aria-label="Intro">
         <div class="hero-content">
           <h1 class="hero-title">CHAMPIONS LEAGUE 2025-2026<br />PREDICTION</h1>
@@ -89,7 +90,8 @@
       </footer>
     </div>
     <script>
-      const winData = {{ win_data | tojson }};
+      const winData = {{ win_data | tojson }}; 
+      // Inject server-side data into JavaScript using Jinja and JSON serialization
 
       const margin = { top: 10, right: 60, bottom: 20, left: 200 },
             width  = 1100 - margin.left - margin.right,
@@ -108,9 +110,11 @@
       container.select("svg")
         .style("border-radius", "12px")
         .style("background", "#07141f");
-
+      
+      // Define reusable SVG elements (gradients, patterns)
       const defs = svg.append("defs");
-
+      
+      // Linear gradient used to fill the bars
       const gradient = defs.append("linearGradient")
         .attr("id", "winGradient")
         .attr("x1", "0%")
@@ -126,7 +130,7 @@
         .attr("offset", "100%")
         .attr("stop-color", "#17c3b2");
 
-      const maxProb = d3.max(winData, d => d.prob);
+      const maxProb = d3.max(winData, d => d.prob); // Compute the maximum probability to scale the x-axis
 
       const x = d3.scaleLinear()
         .domain([0, maxProb])
@@ -139,7 +143,7 @@
 
       const logoSize = 22;
 
-      svg.selectAll("image.logo")
+      svg.selectAll("image.logo") // Add club logos aligned with each team bar
         .data(winData)
         .enter()
         .append("image")
