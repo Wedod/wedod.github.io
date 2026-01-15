@@ -1,4 +1,4 @@
-/* --- Variables and base --- */
+/* CSS custom properties used to keep colors, spacing and layout consistent across the site */
 :root {
   --bg: #041018;
   --panel: #0b1620;
@@ -9,7 +9,7 @@
   --maxw: 1100px;
 }
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 100px; /* Offset for anchor links to prevent sections from being hidden behind the sticky header */
   padding-top: 20px;
   margin-bottom: 60px;
 }
@@ -18,7 +18,7 @@ section {
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Enable smooth scrolling when navigating through anchor links */
 }
 body {
   margin: 0;
@@ -185,7 +185,7 @@ section {
   padding-top: 32px;
   margin-bottom: 80px;
 }
-/* Method card container */
+/* Two-column grid layout for method explanation cards */
 .method-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -193,6 +193,7 @@ section {
   margin-top: 2rem;
 }
 
+/* Make the third method item span the full width of the grid */
 #method .method-card .method-item:nth-child(3) {
   grid-column: 1 / -1;
   max-width: 100%;
@@ -418,6 +419,7 @@ footer {
 }
 
 /* --- Media Queries --- */
+/* Responsive adjustments for tablets and mobile devices */
 @media (max-width: 1000px) {
   .hero {
     height: auto;
