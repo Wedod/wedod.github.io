@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Base directory of the project
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Path to the first CSV (winning team prediction)
+# File paths to the CSV result files used in the application
 WINNER_CSV     = os.path.join(BASE_DIR, "static/data/results/ucl_winner_top20.csv")
 TOP_SCORER_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_scorer_top10.csv")
 TOP_ASSIST_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_assist_top10.csv")
@@ -45,7 +45,7 @@ def load_winner_data(top_n=20):
             "team": row["Team"],
             "prob": round(row["Win_Probability_pct"], 1),
             "rank": rank,
-            "logo": row.get("LogoFile", None),
+            "logo": row.get("LogoFile", None), # Use .get() to avoid errors if the logo column is missing
         })
     return data
 
@@ -109,6 +109,7 @@ def load_mvp_data(top_n=10):
 
 @app.route("/")
 def index():
+    # Home page: displays the main favorite and the top winning probabilities
     favorite = get_top_favorite()
     win_data = load_win_probabilities(top_n=20)
     return render_template("index.html", favorite=favorite, win_data=win_data)
@@ -119,6 +120,7 @@ def method():
 
 @app.route("/results")
 def results():
+    # aggregates all computed rankings (teams, scorers, assists, MVP)
     winner_data     = load_winner_data(top_n=20)
     top_scorer_data = load_top_scorer_data(top_n=10)
     top_assist_data = load_top_assist_data(top_n=10)
