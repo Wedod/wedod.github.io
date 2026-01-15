@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div class="site">
+    <div class="site"> <!-- Main layout wrapper used to center and constrain the site content -->
       <header>
         <div class="nav">
           <div class="brand">
@@ -27,24 +27,24 @@
               </div>
             </div>
           </div>
-          <nav aria-label="Main navigation">
+          <nav aria-label="Main navigation"> <!-- Primary navigation menu with accessible ARIA label -->
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('method') }}">Method</a>
             <a href="{{ url_for('results') }}">Results</a>
-            <a href="{{ url_for('files') }}" class="nav-active">Files</a>
+            <a href="{{ url_for('files') }}" class="nav-active">Files</a> <!-- Active navigation item for the current page -->
           </nav>
         </div>
       </header>
 
       <main>
         <div class="container">
-          <section id="files" aria-label="Project files">
+          <section id="files" aria-label="Project files"> <!-- Section listing downloadable project files and datasets -->
             <h3 class="section-title">Project files</h3>
             <p class="section-sub">
               Notebook and input datasets used to build the predictions.
             </p>
 
-            <div class="method-card">
+            <div class="method-card"> <!-- Reuse of the method-card layout to display downloadable resources -->
               <div class="method-item">
                 <div class="method-bullet">📓</div>
                 <div class="method-text">
@@ -56,7 +56,7 @@
                   <a
                     href="{{ url_for('static', filename='data/notebook/ucl_prediction_notebook.ipynb') }}"
                     download
-                  >
+                  > <!-- Direct download link to a static file served by Flask -->
                     Download (.ipynb)
                   </a>
                 </div>
