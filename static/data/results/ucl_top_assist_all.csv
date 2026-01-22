@@ -1,0 +1,799 @@
+Player,Team,Pos,Performance_Ast,lambda_final_assists,TopAssist_Prob,LogoFile
+Achraf Hakimi,Paris S-G,DF,3,5.832635300024731,0.13474436507936502,Paris S-G.png
+Pierre-Emerick Aubameyang,Marseille,FW,4,5.334156736082538,0.08580316849816869,Marseille.png
+Serge Gnabry,Bayern Munich,"FW,MF",3,5.246737117315998,0.08007781135531147,Bayern Munich.png
+Kenan Yıldız,Juventus,MF,3,4.845114501672246,0.0548417063492063,Juventus.png
+Michael Olise,Bayern Munich,"FW,MF",3,4.631229414096204,0.04865523199023191,Bayern Munich.png
+Dominik Szoboszlai,Liverpool,"MF,DF",3,4.59053962832925,0.04561297619047614,Liverpool.png
+Tijjani Reijnders,Manchester City,MF,3,4.617531591669287,0.045138968253968195,Manchester City.png
+Kevin De Bruyne,Napoli,"MF,FW",2,4.609471981395673,0.042467976190476125,Napoli.png
+Konrad Laimer,Bayern Munich,DF,3,4.5643951127354105,0.0410762637362637,Bayern Munich.png
+Martín Zubimendi,Arsenal,MF,2,4.294153357485712,0.030716111111111086,Arsenal.png
+Florian Wirtz,Liverpool,"MF,FW",2,4.121354768052319,0.027902341269841275,Liverpool.png
+Julián Álvarez,Atlético Madrid,FW,2,4.1916740169671645,0.027667063492063493,Atlético Madrid.png
+Charles De Ketelaere,Atalanta,"FW,MF",2,4.14924543863332,0.02708809523809526,Atalanta.png
+Leandro Trossard,Arsenal,FW,2,4.069264600818499,0.023183809523809534,Arsenal.png
+Declan Rice,Arsenal,MF,2,3.9694984926049264,0.020940509768009777,Arsenal.png
+Lamine Yamal,Barcelona,FW,2,3.8738091146296356,0.018033174603174603,Barcelona.png
+Cody Gakpo,Liverpool,"FW,MF",2,3.6222291307017684,0.01607896825396825,Liverpool.png
+Reece James,Chelsea,"MF,DF",2,3.529784082905822,0.012107023809523807,Chelsea.png
+Myles Lewis-Skelly,Arsenal,DF,2,3.423017218042731,0.010475277777777776,Arsenal.png
+Leroy Sané,Galatasaray,"FW,MF",2,3.489334856216873,0.009853730158730159,Galatasaray.png
+Fermin López,Barcelona,"MF,FW",2,3.479426880718112,0.009366785714285713,Barcelona.png
+Khvicha Kvaratskhelia,Paris S-G,FW,2,3.3569790058572195,0.009075192307692307,Paris S-G.png
+Geovany Quenda,Sporting CP,FW,2,3.3107527587707377,0.008796666666666666,Sporting CP.png
+Arda Güler,Real Madrid,MF,2,3.1991343685650153,0.008795357142857146,Real Madrid.png
+Vinicius Júnior,Real Madrid,"FW,MF",2,3.3899080237150105,0.008627619047619049,Real Madrid.png
+Francesco Esposito,Inter,FW,2,3.380203787145338,0.008572261904761905,Inter.png
+Bradley Barcola,Paris S-G,FW,2,3.2272902984126963,0.008167063492063493,Paris S-G.png
+Nuno Mendes,Paris S-G,DF,2,3.3610413515805915,0.008021666666666667,Paris S-G.png
+Randal Kolo Muani,Tottenham,FW,2,3.343942830055527,0.007734841269841272,Tottenham.png
+Geny Catamo,Sporting CP,"FW,MF",2,3.3015183810694873,0.0073687637362637405,Sporting CP.png
+Karim Adeyemi,Dortmund,MF,2,3.160200418242333,0.006847182539682541,Dortmund.png
+Marcus Rashford,Barcelona,FW,2,3.228827388767388,0.0065285714285714305,Barcelona.png
+Jacob Murphy,Newcastle Utd,"FW,DF",2,3.29266466309207,0.0062434523809523825,Newcastle Utd.png
+Marcel Sabitzer,Dortmund,MF,2,3.1984526064242393,0.006024041514041517,Dortmund.png
+Hakan Çalhanoğlu,Inter,MF,2,3.0950987133462036,0.005847738095238096,Inter.png
+Maghnes Akliouche,Monaco,"MF,FW",2,3.0524833808010534,0.005569285714285716,Monaco.png
+Guus Til,PSV Eindhoven,"FW,MF",2,3.0096604727156966,0.004993333333333334,PSV Eindhoven.png
+Mauro Júnior,PSV Eindhoven,"MF,DF",2,3.006121526352747,0.00493623015873016,PSV Eindhoven.png
+Serhou Guirassy,Dortmund,FW,2,2.887587285722059,0.004482619047619049,Dortmund.png
+Anthony Gordon,Newcastle Utd,FW,2,2.893046332041693,0.004271349206349206,Newcastle Utd.png
+Ibrahim Maza,Leverkusen,MF,2,2.946989606756623,0.003825,Leverkusen.png
+Jobe Bellingham,Dortmund,MF,2,2.7820454428603605,0.003014166666666666,Dortmund.png
+Carlos Forbs,Club Brugge,"FW,MF",2,2.681987768022389,0.002739285714285714,Club Brugge.png
+Marko Janković,Qarabağ,MF,2,2.7091734803955596,0.0026645238095238093,Qarabağ.png
+Bukayo Saka,Arsenal,FW,1,2.711039555171186,0.002638571428571428,Arsenal.png
+Wesley Fofana,Chelsea,DF,1,2.645714593192092,0.002304166666666666,Chelsea.png
+Mohamed Salah,Liverpool,FW,1,2.6804144375966867,0.0022612301587301587,Liverpool.png
+Hans Vanaken,Club Brugge,MF,2,2.7299780784696104,0.0021384523809523806,Club Brugge.png
+Cristian Romero,Tottenham,DF,1,2.4669073869211147,0.0019418589743589744,Tottenham.png
+Alessandro Bastoni,Inter,DF,1,2.4452418063101855,0.001572692307692308,Inter.png
+Nathaniel Brown,Eint Frankfurt,"DF,MF",2,2.386390750641824,0.0014216666666666668,Eint Frankfurt.png
+Lukáš Provod,Slavia Prague,"MF,FW",2,2.51553055630946,0.0013985714285714285,Slavia Prague.png
+Rodrygo,Real Madrid,"FW,MF",1,2.390801251957578,0.001186904761904762,Real Madrid.png
+Gabriel Magalhães,Arsenal,DF,1,2.2579977169062455,0.0011746367521367521,Arsenal.png
+Phil Foden,Manchester City,MF,1,2.2637273180902313,0.001001978021978022,Manchester City.png
+Andrew Robertson,Liverpool,DF,1,2.202471509317177,0.0010016666666666665,Liverpool.png
+Ange-Yoan Bonny,Inter,FW,2,2.1052602197363925,0.0009501190476190476,Inter.png
+Mikel Jauregizar,Athletic Club,MF,2,2.4104712903453827,0.0008944444444444442,Athletic Club.png
+Pedro Fernandez,Barcelona,FW,1,2.178934805291445,0.0008866666666666667,Barcelona.png
+Pedro Gonçalves,Sporting CP,"FW,MF",1,2.2447973058736124,0.0008849999999999999,Sporting CP.png
+Ricardo Pepi,PSV Eindhoven,FW,2,2.091930706483229,0.0007916666666666666,PSV Eindhoven.png
+Lloyd Kelly,Juventus,DF,1,2.2393871288855682,0.0007819780219780221,Juventus.png
+Pascal Groß,Dortmund,MF,1,2.3276250307718245,0.0007533333333333333,Dortmund.png
+Gabriel Martinelli,Arsenal,FW,1,2.2472589209025493,0.0007449999999999999,Arsenal.png
+Sandro Tonali,Newcastle Utd,MF,1,1.834729967882771,0.0006450000000000001,Newcastle Utd.png
+Dušan Vlahović,Juventus,FW,1,2.277134611897748,0.0006283333333333333,Juventus.png
+Kieran Trippier,Newcastle Utd,DF,1,2.1377292642279033,0.0006,Newcastle Utd.png
+Jeremy Doku,Manchester City,"MF,FW",1,1.7285690109964467,0.0005816666666666667,Manchester City.png
+Takumi Minamino,Monaco,MF,1,2.002889879746507,0.0005616666666666667,Monaco.png
+Darryl Bakola,Marseille,MF,1,2.178375858206909,0.0005616666666666666,Marseille.png
+Pedri,Barcelona,MF,1,1.8989993361479705,0.0005041666666666667,Barcelona.png
+Eberechi Eze,Arsenal,"MF,FW",1,2.103010570822322,0.0004999999999999999,Arsenal.png
+Julian Ryerson,Dortmund,DF,1,2.0332059691221316,0.0004866666666666666,Dortmund.png
+Fabián Ruiz Peña,Paris S-G,MF,1,1.9118497965655914,0.0004583333333333334,Paris S-G.png
+Håkon Evjen,Bodø/Glimt,MF,2,2.0,0.0004583333333333333,Bodø/Glimt.png
+Ilias Akhomach,Villarreal,MF,2,2.0,0.0004533333333333333,Villarreal.png
+Sergiño Dest,PSV Eindhoven,DF,1,1.658109032934879,0.0004383333333333334,PSV Eindhoven.png
+Alexander Sørloth,Atlético Madrid,FW,1,2.0322977327719016,0.00040166666666666665,Atlético Madrid.png
+Andrey Santos,Chelsea,MF,2,2.1743485509298206,0.0003926190476190476,Chelsea.png
+Enzo Fernández,Chelsea,MF,1,1.9360108638678435,0.00037,Chelsea.png
+Malo Gusto,Chelsea,"DF,MF",1,1.9853553413943477,0.00034999999999999994,Chelsea.png
+Xavi Simons,Tottenham,"MF,FW",1,1.9442940449211368,0.00034833333333333336,Tottenham.png
+Khéphren Thuram,Juventus,MF,1,1.8784988788278487,0.000325,Juventus.png
+Timothy Weah,Marseille,"DF,FW",1,1.8394828987980922,0.0003176190476190476,Marseille.png
+Álex Grimaldo,Leverkusen,DF,1,1.9456363608175389,0.0003166666666666667,Leverkusen.png
+Nico O’Reilly,Manchester City,DF,1,1.8693225062670424,0.0003083333333333333,Manchester City.png
+Yann Aurel Bisseck,Inter,DF,1,1.9093317371570904,0.0003,Inter.png
+Mario Lemina,Galatasaray,MF,1,1.9245759283342387,0.00029761904761904765,Galatasaray.png
+Sávio,Manchester City,"MF,FW",1,1.8370003209955144,0.00029761904761904765,Manchester City.png
+Giorgi Kochorashvili,Sporting CP,MF,1,2.0894287903249644,0.0002916666666666667,Sporting CP.png
+Éderson,Atalanta,MF,1,1.6958407738459575,0.0002833333333333333,Atalanta.png
+Fotis Ioannidis,Sporting CP,"FW,MF",1,1.5705138263987908,0.000225,Sporting CP.png
+Ryan Gravenberch,Liverpool,MF,1,1.8349026078200579,0.000225,Liverpool.png
+Francisco Trincão,Sporting CP,MF,1,1.7088053520756419,0.00021928571428571426,Sporting CP.png
+Thibaut Courtois,Real Madrid,GK,1,1.8493021713492566,0.0002083333333333333,Real Madrid.png
+Couhaib Driouech,PSV Eindhoven,"MF,FW",2,2.134039895587563,0.00020333333333333333,PSV Eindhoven.png
+Joaquin Seys,Club Brugge,DF,1,1.5178046649094252,0.0002,Club Brugge.png
+Ayoub El Kaabi,Olympiacos,FW,1,1.3377586286629162,0.0002,Olympiacos.png
+Pablo Barrios,Atlético Madrid,MF,1,1.5871052957979466,0.0002,Atlético Madrid.png
+Marcus Thuram,Inter,FW,1,1.9416881937285098,0.00019999999999999998,Inter.png
+Pedro Porro,Tottenham,DF,1,1.6950827330347749,0.00019166666666666665,Tottenham.png
+Antoine Griezmann,Atlético Madrid,FW,1,1.8662396721490477,0.00018666666666666666,Atlético Madrid.png
+Igor Paixão,Marseille,"FW,MF",1,1.6975821077549647,0.00018333333333333334,Marseille.png
+Vitinha,Paris S-G,MF,1,1.6570233915409718,0.000175,Paris S-G.png
+João Neves,Paris S-G,MF,1,2.1250828340818746,0.00016666666666666666,Paris S-G.png
+Joško Gvardiol,Manchester City,DF,1,1.7437874357037328,0.00015666666666666666,Manchester City.png
+Andrea Cambiaso,Juventus,DF,1,1.5897640260313435,0.00015357142857142856,Juventus.png
+João Palhinha,Tottenham,MF,1,1.5778387362778306,0.00015,Tottenham.png
+Maximilian Beier,Dortmund,MF,1,1.6732362163122634,0.00015,Dortmund.png
+Sean Steur,Ajax,MF,1,1.7996407620356774,0.00015,Ajax.png
+Mason Greenwood,Marseille,"FW,MF",1,1.838109572928553,0.00013666666666666666,Marseille.png
+Nick Pope,Newcastle Utd,GK,1,1.6128058571340516,0.00013428571428571428,Newcastle Utd.png
+Elye Wahi,Eint Frankfurt,FW,1,1.6802279723546483,0.0001333333333333333,Eint Frankfurt.png
+Ademola Lookman,Atalanta,"FW,MF",1,1.9511340838216662,0.00011999999999999999,Atalanta.png
+Marten de Roon,Atalanta,MF,1,1.583367929224594,0.00011999999999999999,Atalanta.png
+Martin Ødegaard,Arsenal,MF,1,1.7188660504189222,0.00011666666666666668,Arsenal.png
+Álex Berenguer,Athletic Club,FW,1,1.6439408682430914,0.00011666666666666665,Athletic Club.png
+Giuliano Simeone,Atlético Madrid,MF,1,1.8021336671309451,0.00011499999999999999,Atlético Madrid.png
+Rico Lewis,Manchester City,MF,1,1.5656135054179632,0.00010928571428571427,Manchester City.png
+Elias Achouri,FC Copenhagen,MF,1,1.5859497266080014,0.00010333333333333332,FC Copenhagen.png
+Jonathan Tah,Bayern Munich,DF,1,1.5923480806930435,0.0001,Bayern Munich.png
+Roony Bardghji,Barcelona,FW,1,1.1166368964777713,0.0001,Barcelona.png
+Fredrik Aursnes,Benfica,"FW,MF",1,1.4277969437817488,0.0001,Benfica.png
+Jules Koundé,Barcelona,DF,1,1.7359059809982917,0.0001,Barcelona.png
+Leonardo Spinazzola,Napoli,DF,1,1.8044840287909243,0.0001,Napoli.png
+Lucas Oliveira Rosa,Ajax,DF,1,1.8104926868070663,0.0001,Ajax.png
+Krépin Diatta,Monaco,DF,1,1.5566155877996208,9.499999999999999e-05,Monaco.png
+Eduardo Camavinga,Real Madrid,MF,1,1.2703554172450762,8.428571428571429e-05,Real Madrid.png
+Riccardo Calafiori,Arsenal,DF,1,1.431780623155125,8.333333333333333e-05,Arsenal.png
+Jude Bellingham,Real Madrid,MF,1,1.962373091677788,8.333333333333333e-05,Real Madrid.png
+Marcos López,FC Copenhagen,DF,1,1.4831290364874983,8.333333333333333e-05,FC Copenhagen.png
+Fabio Miretti,Juventus,MF,1,1.404723348656304,7.833333333333333e-05,Juventus.png
+Yunus Musah,Atalanta,MF,1,1.3507937951882059,7e-05,Atalanta.png
+Giacomo Raspadori,Atlético Madrid,"MF,FW",1,1.5650020751890632,7e-05,Atlético Madrid.png
+Mehdi Taremi,Olympiacos,"MF,FW",1,1.5342612248881364,6.666666666666666e-05,Olympiacos.png
+Alejandro Balde,Barcelona,DF,1,1.769142406927529,6.666666666666666e-05,Barcelona.png
+David Neres,Napoli,"MF,FW",1,1.5431048856352867,6.111111111111112e-05,Napoli.png
+Aaron Anselmino,Dortmund,DF,1,1.4804617200228403,5.8333333333333326e-05,Dortmund.png
+Rodrigo Huescas,FC Copenhagen,DF,1,1.4349296319786367,5e-05,FC Copenhagen.png
+João Mário Lopes,Juventus,DF,1,1.6927022517084551,5e-05,Juventus.png
+Aleksandr Shirobokov,Qaırat Almaty,DF,1,1.0,5e-05,
+Santiago Hezze,Olympiacos,MF,1,1.4848392675146316,4.1666666666666665e-05,Olympiacos.png
+Chiquinho,Olympiacos,MF,1,1.3259576135651674,3.333333333333333e-05,Olympiacos.png
+Iván Fresneda,Sporting CP,DF,0,0.8500587009593457,3.333333333333333e-05,Sporting CP.png
+Mislav Oršić,Pafos FC,"MF,FW",1,1.482229964246714,3.333333333333333e-05,Pafos FC.png
+Nicolo Tresoldi,Club Brugge,FW,1,1.2313833236865976,3.333333333333333e-05,Club Brugge.png
+Junnosuke Suzuki,FC Copenhagen,DF,1,1.459379648420897,3.333333333333333e-05,FC Copenhagen.png
+Yoram Zague,FC Copenhagen,DF,1,1.344937458191311,3.333333333333333e-05,FC Copenhagen.png
+Matt O'Riley,Marseille,MF,1,1.6467233242143369,2.5e-05,Marseille.png
+Harvey Barnes,Newcastle Utd,"FW,MF",1,1.6253378409127928,2.5e-05,Newcastle Utd.png
+Heorhiy Sudakov,Benfica,"FW,MF",1,1.3727891590437538,2.5e-05,Benfica.png
+Don-Angelo Konadu,Ajax,FW,1,1.2876107744743739,2e-05,Ajax.png
+Sofiane Boufal,Unions SG,"MF,FW",1,1.0,1.6666666666666664e-05,
+Pierre Kalulu,Juventus,DF,1,1.5600638807544236,1.4285714285714285e-05,Juventus.png
+Fares Chaïbi,Eint Frankfurt,"MF,FW",1,1.239004526677687,1.4285714285714285e-05,Eint Frankfurt.png
+Arthur Vermeeren,Marseille,MF,1,1.6102111058379602,1.4285714285714285e-05,Marseille.png
+Ivan Perišić,PSV Eindhoven,"MF,FW",1,1.5770684615783912,1.25e-05,PSV Eindhoven.png
+Joey Veerman,PSV Eindhoven,MF,1,1.5465865017460405,5e-06,PSV Eindhoven.png
+David Doudera,Slavia Prague,"DF,FW",0,0.17075312519586452,0.0,Slavia Prague.png
+Lucas Bergvall,Tottenham,MF,0,0.42638108225422217,0.0,Tottenham.png
+Mohammed Kudus,Tottenham,FW,0,0.3650370396139903,0.0,Tottenham.png
+Kevin Danso,Tottenham,DF,0,0.38467255545743584,0.0,Tottenham.png
+Christian Mawissa,Monaco,DF,0,0.08225160375288045,0.0,Monaco.png
+Mamadou Coulibaly,Monaco,MF,0,0.3662449737186653,0.0,Monaco.png
+Wilson Odobert,Tottenham,FW,0,0.4447251991488108,0.0,Tottenham.png
+Kassoum Ouattara,Monaco,"DF,FW",0,0.17753537623037882,0.0,Monaco.png
+Mohammed Salisu,Monaco,DF,0,0.35232080953721573,0.0,Monaco.png
+Jordan Teze,Monaco,"MF,DF",0,0.6208123201146211,0.0,Monaco.png
+Caio Henrique Oliveira Silva,Monaco,DF,0,0.6223142369139576,0.0,Monaco.png
+Eric Dier,Monaco,DF,0,0.6158450727215226,0.0,Monaco.png
+Ansu Fati,Monaco,"MF,FW",0,0.08381050031041334,0.0,Monaco.png
+Aleksandr Golovin,Monaco,"FW,MF",0,0.4132710270791648,0.0,Monaco.png
+Philipp Köhn,Monaco,GK,0,0.25806405334099153,0.0,Monaco.png
+Thilo Kehrer,Monaco,DF,0,0.13403329270775527,0.0,Monaco.png
+Vanderson,Monaco,DF,0,0.4707043727035786,0.0,Monaco.png
+Federico Valverde,Real Madrid,"DF,MF",0,0.3543256986281958,0.0,Real Madrid.png
+George Ilenikhena,Monaco,FW,0,0.013804594196607761,0.0,Monaco.png
+Lukáš Hrádecký,Monaco,GK,0,0.43238527799719706,0.0,Monaco.png
+Lamine Camara,Monaco,MF,0,0.4891322087069926,0.0,Monaco.png
+Pape Cabral,Monaco,MF,0,0.013804594196607761,0.0,Monaco.png
+Camilo Marques,Qarabağ,FW,1,1.2663850595441488,0.0,Qarabağ.png
+Antonio Vergara,Napoli,MF,0,0.004223338470030878,0.0,Napoli.png
+Mika Biereth,Monaco,FW,0,0.0615989516629392,0.0,Monaco.png
+Juan Jesus,Napoli,DF,0,0.19413517275895845,0.0,Napoli.png
+William Osula,Newcastle Utd,FW,1,1.1905357222495387,0.0,Newcastle Utd.png
+Aaron Ramsdale,Newcastle Utd,GK,0,0.17818741222186854,0.0,Newcastle Utd.png
+Destiny Udogie,Tottenham,DF,0,0.019133083982781667,0.0,Tottenham.png
+Yoane Wissa,Newcastle Utd,FW,0,0.0009677121860760941,0.0,Newcastle Utd.png
+Scott McTominay,Napoli,MF,0,0.287576460684265,0.0,Napoli.png
+Vanja Milinković-Savić,Napoli,GK,0,0.13552059878057837,0.0,Napoli.png
+Mojmir Chytil,Slavia Prague,FW,0,0.005572642303479983,0.0,Slavia Prague.png
+Matteo Politano,Napoli,"MF,FW",0,0.32790889736614764,0.0,Napoli.png
+Sam Beukema,Napoli,DF,0,0.1782962703246238,0.0,Napoli.png
+Alessandro Buongiorno,Napoli,DF,0,0.2968520445146161,0.0,Napoli.png
+Giovanni Di Lorenzo,Napoli,DF,0,0.3181413782528899,0.0,Napoli.png
+Elif Elmas,Napoli,"MF,FW",0,0.3397972693576741,0.0,Napoli.png
+Rasmus Højlund,Napoli,FW,0,0.17195678089445485,0.0,Napoli.png
+Noa Lang,Napoli,"MF,FW",0,0.3316314530480054,0.0,Napoli.png
+Folarin Balogun,Monaco,FW,0,0.40951078895955784,0.0,Monaco.png
+Gonzalo García,Real Madrid,FW,1,1.3191266537688562,0.0,Real Madrid.png
+Stanislav Lobotka,Napoli,MF,0,0.24091015018620532,0.0,Napoli.png
+Fran Garcia,Real Madrid,DF,0,0.07833713008013542,0.0,Real Madrid.png
+Lorenzo Lucca,Napoli,FW,0,0.012994637621004008,0.0,Napoli.png
+Mathías Olivera,Napoli,DF,0,0.3687188964761201,0.0,Napoli.png
+Dani Ceballos,Real Madrid,MF,0,0.30373755269343583,0.0,Real Madrid.png
+Andre-Frank Zambo Anguissa,Napoli,MF,0,0.5009374996167523,0.0,Napoli.png
+Brennan Johnson,Tottenham,FW,0,0.04915141692904124,0.0,Tottenham.png
+Billy Gilmour,Napoli,MF,0,0.041165870863332024,0.0,Napoli.png
+Miguel Gutiérrez,Napoli,DF,0,0.5631145359273042,0.0,Napoli.png
+Amir Rrahmani,Napoli,DF,0,0.28893370883262204,0.0,Napoli.png
+Archie Gray,Tottenham,"MF,DF",0,0.2713639356591302,0.0,Tottenham.png
+Trent Alexander-Arnold,Real Madrid,DF,0,0.13683672229134416,0.0,Real Madrid.png
+Denis Zakaria,Monaco,MF,0,0.36032106499766414,0.0,Monaco.png
+Rodrigo Bentancur,Tottenham,MF,1,1.683035466257921,0.0,Tottenham.png
+Kylian Mbappé,Real Madrid,FW,0,1.066422159357716,0.0,Real Madrid.png
+Aladji Bamba,Monaco,MF,0,0.09374523087235437,0.0,Monaco.png
+Nicolás González,Manchester City,MF,0,0.2498150886806712,0.0,Manchester City.png
+Erling Haaland,Manchester City,FW,0,0.32936847624577154,0.0,Manchester City.png
+Pape Matar Sarr,Tottenham,MF,0,0.27719901403124303,0.0,Tottenham.png
+Erik Prekop,Slavia Prague,"FW,MF",0,0.008606952588499325,0.0,Slavia Prague.png
+Rúben Dias,Manchester City,DF,0,0.21917581819137283,0.0,Manchester City.png
+Gianluigi Donnarumma,Manchester City,GK,0,0.22294006545922132,0.0,Manchester City.png
+Jakub Markovič,Slavia Prague,GK,0,0.28413418535056084,0.0,Slavia Prague.png
+Jan Bořil,Slavia Prague,DF,0,0.06579380945950249,0.0,Slavia Prague.png
+Tomáš Holeš,Slavia Prague,DF,0,0.049499181426194465,0.0,Slavia Prague.png
+Daiki Hashioka,Slavia Prague,DF,0,0.033645569413839685,0.0,Slavia Prague.png
+Bernardo Silva,Manchester City,MF,0,0.3428040389265804,0.0,Manchester City.png
+Rayan Cherki,Manchester City,"FW,MF",0,0.030601290342341894,0.0,Manchester City.png
+Omar Marmoush,Manchester City,FW,0,0.01706885573673071,0.0,Manchester City.png
+Matheus Nunes,Manchester City,DF,0,0.25469753793732075,0.0,Manchester City.png
+John Stones,Manchester City,DF,0,0.4189833022901054,0.0,Manchester City.png
+Nathan Aké,Manchester City,DF,0,0.09137638627361705,0.0,Manchester City.png
+Oscar Bobb,Manchester City,"FW,MF",0,0.07164330925721368,0.0,Manchester City.png
+Oscar Dorley,Slavia Prague,"MF,DF",0,0.20517975694584314,0.0,Slavia Prague.png
+Rob Schoofs,Unions SG,MF,1,1.0,0.0,
+Rayan Aït-Nouri,Manchester City,DF,0,0.05027430123873503,0.0,Manchester City.png
+Abdukodir Khusanov,Manchester City,DF,0,0.12577650093300857,0.0,Manchester City.png
+Adem Zorgane,Unions SG,MF,1,1.0,0.0,
+Kevin Rodríguez,Unions SG,FW,1,1.0,0.0,
+Rodri,Manchester City,MF,0,0.21138511773368948,0.0,Manchester City.png
+Mateo Kovačić,Manchester City,MF,0,0.21180606972279928,0.0,Manchester City.png
+Tomáš Vlček,Slavia Prague,DF,0,0.1251830952106391,0.0,Slavia Prague.png
+Alfonso Pedraza,Villarreal,DF,1,1.0,0.0,Villarreal.png
+James Trafford,Manchester City,GK,0,0.18294405124823238,0.0,Manchester City.png
+Hugo Ekitike,Liverpool,FW,0,0.18452374683697187,0.0,Liverpool.png
+Ivan Schranz,Slavia Prague,"MF,FW",0,0.011331390231917735,0.0,Slavia Prague.png
+Tadjidine Mmadi,Marseille,MF,0,0.0009461319526329271,0.0,Marseille.png
+Amine Gouiri,Marseille,FW,0,0.011942338666042248,0.0,Marseille.png
+Djed Spence,Tottenham,DF,0,0.20468026254327565,0.0,Tottenham.png
+Stanis Idumbo,Monaco,MF,0,0.023447284911399174,0.0,Monaco.png
+Lucas Michal,Monaco,FW,0,0.02263186898681565,0.0,Monaco.png
+Fabian Schär,Newcastle Utd,DF,0,0.11298889373585226,0.0,Newcastle Utd.png
+Álvaro Carreras,Real Madrid,DF,0,0.32755021840808,0.0,Real Madrid.png
+Guglielmo Vicario,Tottenham,GK,0,0.17192707849846886,0.0,Tottenham.png
+Micky van de Ven,Tottenham,DF,0,0.2115627912644263,0.0,Tottenham.png
+Pierre Højbjerg,Marseille,MF,0,0.3103292525861976,0.0,Marseille.png
+Vasil Kušej,Slavia Prague,"FW,MF",0,0.1783019600017521,0.0,Slavia Prague.png
+Gerónimo Rulli,Marseille,GK,0,0.15735343936840537,0.0,Marseille.png
+Michael Amir Murillo,Marseille,DF,0,0.18293949451798078,0.0,Marseille.png
+Raúl Asencio,Real Madrid,DF,0,0.2557501221842723,0.0,Real Madrid.png
+Emerson Palmieri,Marseille,DF,0,0.2368727358116627,0.0,Marseille.png
+Benjamin Pavard,Marseille,DF,0,0.18544909068772497,0.0,Marseille.png
+Aurélien Tchouaméni,Real Madrid,MF,0,0.2970027528560206,0.0,Real Madrid.png
+Ogbu Igoh,Slavia Prague,DF,0,0.11762768439975652,0.0,Slavia Prague.png
+Nayef Aguerd,Marseille,DF,0,0.2665355443493707,0.0,Marseille.png
+Muhammed Cham,Slavia Prague,MF,0,0.015136162777413538,0.0,Slavia Prague.png
+David Moses,Slavia Prague,"MF,DF",0,0.19867573679519082,0.0,Slavia Prague.png
+Leonardo Balerdi,Marseille,DF,0,0.25554782765880485,0.0,Marseille.png
+Angel Gomes,Marseille,"MF,FW",0,0.00981093798573752,0.0,Marseille.png
+Richarlison,Tottenham,FW,0,0.17201348634768873,0.0,Tottenham.png
+Robinio Vaz,Marseille,"FW,MF",0,0.006332402611456672,0.0,Marseille.png
+CJ Egan-Riley,Marseille,DF,0,0.06481268439365251,0.0,Marseille.png
+Ulisses Garcia,Marseille,DF,0,0.12788157791999027,0.0,Marseille.png
+Brahim Díaz,Real Madrid,"FW,MF",0,0.01867483842590149,0.0,Real Madrid.png
+Geoffrey Kondogbia,Marseille,MF,0,0.1371118307061527,0.0,Marseille.png
+Facundo Medina,Marseille,DF,0,0.13473522564057938,0.0,Marseille.png
+Bilal Nadir,Marseille,"MF,FW",0,0.0615055682552382,0.0,Marseille.png
+Joe Willock,Newcastle Utd,MF,0,0.06464006428070325,0.0,Newcastle Utd.png
+Sven Botman,Newcastle Utd,DF,0,0.2730630426482393,0.0,Newcastle Utd.png
+Valentino Livramento,Newcastle Utd,DF,0,0.32745570952238073,0.0,Newcastle Utd.png
+Vlad Dragomir,Pafos FC,"MF,FW",0,0.17552799545499337,0.0,Pafos FC.png
+Esmir Bajraktarevic,PSV Eindhoven,"MF,FW",0,0.008782402274776693,0.0,PSV Eindhoven.png
+Ryan Flamingo,PSV Eindhoven,DF,0,0.41024749026352886,0.0,PSV Eindhoven.png
+Myron Boadu,PSV Eindhoven,"MF,FW",0,0.004845474943462277,0.0,PSV Eindhoven.png
+Ruben van Bommel,PSV Eindhoven,"MF,FW",0,0.34034406602919065,0.0,PSV Eindhoven.png
+Georgios Vagiannidis,Sporting CP,DF,0,0.10412492812589527,0.0,Sporting CP.png
+Salvador Blopa,Sporting CP,"FW,DF",0,0.0067919776255848255,0.0,Sporting CP.png
+Willian Pacho,Paris S-G,DF,0,0.29354884652750973,0.0,Paris S-G.png
+Leandro Andrade,Qarabağ,"FW,MF",0,0.1245944152621801,0.0,Qarabağ.png
+Warren Zaïre-Emery,Paris S-G,"MF,DF",0,0.3892974180413948,0.0,Paris S-G.png
+Lucas Chevalier,Paris S-G,GK,0,0.22405566598290538,0.0,Paris S-G.png
+Emmanuel Addai,Qarabağ,FW,0,0.19275847792639422,0.0,Qarabağ.png
+Lee Kang-in,Paris S-G,"FW,MF",0,0.058447585458816044,0.0,Paris S-G.png
+Zeno Debast,Sporting CP,"DF,MF",0,0.11333956920238446,0.0,Sporting CP.png
+Matheus Reis,Sporting CP,DF,0,0.07858493189932804,0.0,Sporting CP.png
+Senny Mayulu,Paris S-G,"FW,MF",0,0.30798771268696357,0.0,Paris S-G.png
+Gonçalo Ramos,Paris S-G,FW,0,0.01031905776399357,0.0,Paris S-G.png
+Eduardo Quaresma,Sporting CP,DF,0,0.22951516521216553,0.0,Sporting CP.png
+Illia Zabarnyi,Paris S-G,DF,0,0.3289439635530739,0.0,Paris S-G.png
+Ousmane Diomande,Sporting CP,DF,0,0.2726472780034843,0.0,Sporting CP.png
+Marquinhos,Paris S-G,DF,0,0.6820512829267884,0.0,Paris S-G.png
+Antonio Rüdiger,Real Madrid,DF,0,0.1731323885129876,0.0,Real Madrid.png
+Ousmane Dembélé,Paris S-G,FW,0,0.1929486836124408,0.0,Paris S-G.png
+Lucas Hernández,Paris S-G,DF,0,0.09221514702115119,0.0,Paris S-G.png
+Ferland Mendy,Real Madrid,DF,0,0.20552113066724295,0.0,Real Madrid.png
+Ibrahim Mbaye,Paris S-G,"FW,MF",0,0.054030522337306465,0.0,Paris S-G.png
+João Simões,Sporting CP,MF,0,0.24100919090909462,0.0,Sporting CP.png
+Quentin Ndjantou Mbitcha,Paris S-G,"FW,MF",1,1.3641353479400524,0.0,Paris S-G.png
+Désiré Doué,Paris S-G,FW,0,0.16893582478178007,0.0,Paris S-G.png
+Ibrahima Konaté,Liverpool,DF,0,0.1714738677402685,0.0,Liverpool.png
+Paul Wanner,PSV Eindhoven,MF,0,0.01184386188734767,0.0,PSV Eindhoven.png
+Armando Obispo,PSV Eindhoven,DF,0,0.15653410108741134,0.0,PSV Eindhoven.png
+Christos Zafeiris,Slavia Prague,MF,0,0.07931627711169628,0.0,Slavia Prague.png
+Ricardinho,Qaırat Almaty,"FW,MF",1,1.0,0.0,
+Kevin Medina,Qarabağ,DF,0,0.10497637767729429,0.0,Qarabağ.png
+Youssoupha Mbodji,Slavia Prague,"DF,MF",0,0.06820566043384953,0.0,Slavia Prague.png
+Bəhlul Mustafazadə,Qarabağ,DF,0,0.08744474194956703,0.0,Qarabağ.png
+Matheus Silva,Qarabağ,DF,0,0.12453586988793101,0.0,Qarabağ.png
+Abdellah Zoubir,Qarabağ,"MF,FW",1,1.2764153110975607,0.0,Qarabağ.png
+Nəriman Axundzadə,Qarabağ,FW,1,1.0446083554599634,0.0,Qarabağ.png
+Mateusz Kochalski,Qarabağ,GK,0,0.08744474194956703,0.0,Qarabağ.png
+Dani Bolt,Qarabağ,"DF,FW",0,0.004796482768229115,0.0,Qarabağ.png
+Kady Borges,Qarabağ,"MF,FW",0,0.5385125453950163,0.0,Qarabağ.png
+Musa Qurbanlı,Qarabağ,FW,0,0.0006351828153599814,0.0,Qarabağ.png
+Chriso,Qarabağ,MF,0,0.0007276309532191016,0.0,Qarabağ.png
+Samy Mmaee,Qarabağ,DF,0,0.02035674504005998,0.0,Qarabağ.png
+Joni Montiel,Qarabağ,MF,0,0.004886921705355046,0.0,Qarabağ.png
+Giorgi Zaria,Qaırat Almaty,"MF,FW",1,1.0,0.0,
+Ricardo Mangas,Sporting CP,MF,0,0.02291878570567989,0.0,Sporting CP.png
+Michal Sadílek,Slavia Prague,MF,0,0.08892804243645439,0.0,Slavia Prague.png
+Yarek Gasiorowski,PSV Eindhoven,DF,0,0.12068688604886854,0.0,PSV Eindhoven.png
+Matej Kovar,PSV Eindhoven,GK,0,0.12935740010598543,0.0,PSV Eindhoven.png
+Oleksii Kashchuk,Qarabağ,"FW,MF",0,0.005537151371765847,0.0,Qarabağ.png
+Dennis Man,PSV Eindhoven,"MF,FW",0,0.15376777025933033,0.0,PSV Eindhoven.png
+Elvin Cəfərquliyev,Qarabağ,DF,0,0.1417669788638588,0.0,Qarabağ.png
+Pedro Bicalho,Qarabağ,MF,0,0.08464098897054527,0.0,Qarabağ.png
+Ismael Saibari,PSV Eindhoven,"FW,MF",0,0.14813661206468634,0.0,PSV Eindhoven.png
+Anass Salah-Eddine,PSV Eindhoven,DF,0,0.34395809625820173,0.0,PSV Eindhoven.png
+Jerdy Schouten,PSV Eindhoven,"DF,MF",0,0.1562228612784428,0.0,PSV Eindhoven.png
+João Virgínia,Sporting CP,GK,0,0.17890684760046033,0.0,Sporting CP.png
+Rodrigo Ribeiro,Sporting CP,FW,0,0.007027943666624173,0.0,Sporting CP.png
+Toral Bayramov,Qarabağ,"DF,FW",0,0.0036532469970041344,0.0,Qarabağ.png
+Matvei Safonov,Paris S-G,GK,0,0.1835246188677006,0.0,Paris S-G.png
+David Goldar,Pafos FC,DF,0,0.07594173256492333,0.0,Pafos FC.png
+Ben Davies,Tottenham,DF,0,0.1762697432249483,0.0,Tottenham.png
+Bruno Langa,Pafos FC,DF,0,0.0035135365979273372,0.0,Pafos FC.png
+Rodinei,Olympiacos,DF,0,0.3979230117199866,0.0,Olympiacos.png
+Gabriel Strefezza,Olympiacos,FW,1,1.0605057182068145,0.0,Olympiacos.png
+Diogo Nascimento,Olympiacos,"MF,FW",0,0.03373737938714738,0.0,Olympiacos.png
+Alisson Santos,Sporting CP,"FW,MF",0,0.009610487430366015,0.0,Sporting CP.png
+Dani Carvajal,Real Madrid,DF,0,0.17931565154426465,0.0,Real Madrid.png
+Lorenzo Scipioni,Olympiacos,MF,0,0.007248048898538546,0.0,Olympiacos.png
+Bruno Onyemaechi,Olympiacos,DF,0,0.025379683635048726,0.0,Olympiacos.png
+David Alaba,Real Madrid,DF,0,0.1529929525741375,0.0,Real Madrid.png
+Luis Javier Suárez,Sporting CP,FW,0,0.43676570131848474,0.0,Sporting CP.png
+Alexandros Paschalakis,Olympiacos,GK,0,0.13432695071074394,0.0,Olympiacos.png
+Stavros Pnevmonidis,Olympiacos,MF,0,0.011251317239019579,0.0,Olympiacos.png
+Roman Yaremchuk,Olympiacos,FW,0,0.00920809982273273,0.0,Olympiacos.png
+Morten Hjulmand,Sporting CP,MF,0,0.3089503441983542,0.0,Sporting CP.png
+Maximiliano Araújo,Sporting CP,DF,0,0.16183257650068836,0.0,Sporting CP.png
+Dan Burn,Newcastle Utd,DF,0,0.34614565208316606,0.0,Newcastle Utd.png
+Éder Militão,Real Madrid,DF,0,0.3814823427026934,0.0,Real Madrid.png
+Bruno Guimarães,Newcastle Utd,MF,0,0.43964536397650855,0.0,Newcastle Utd.png
+Malick Thiaw,Newcastle Utd,DF,0,0.175162780459557,0.0,Newcastle Utd.png
+Nick Woltemade,Newcastle Utd,FW,0,0.23371812482572668,0.0,Newcastle Utd.png
+Franco Mastantuono,Real Madrid,FW,0,0.08599832138736108,0.0,Real Madrid.png
+Anthony Elanga,Newcastle Utd,FW,0,0.34712848828684933,0.0,Newcastle Utd.png
+Joelinton,Newcastle Utd,MF,0,0.21175442704763695,0.0,Newcastle Utd.png
+Lewis Miley,Newcastle Utd,"MF,DF",0,0.17107962403798982,0.0,Newcastle Utd.png
+Mathys Tel,Tottenham,FW,0,0.03030699732935555,0.0,Tottenham.png
+Dean Huijsen,Real Madrid,DF,0,0.3659871736508787,0.0,Real Madrid.png
+Dane Scarlett,Tottenham,MF,0,0.01064308989749469,0.0,Tottenham.png
+Štěpán Chaloupek,Slavia Prague,"DF,MF",0,0.0651384440955682,0.0,Slavia Prague.png
+Lewis Hall,Newcastle Utd,DF,0,0.029733927593354838,0.0,Newcastle Utd.png
+Jacob Ramsey,Newcastle Utd,MF,0,0.01575017748450332,0.0,Newcastle Utd.png
+Giulian Biancone,Olympiacos,DF,0,0.014613467478819196,0.0,Olympiacos.png
+Jindřich Staněk,Slavia Prague,GK,0,0.14492506158434812,0.0,Slavia Prague.png
+Kostas Tzolakis,Olympiacos,GK,0,0.21909607619110624,0.0,Olympiacos.png
+Landry Dimata,Pafos FC,"FW,MF",0,0.008114756566815363,0.0,Pafos FC.png
+Derrick Luckassen,Pafos FC,DF,0,0.18399830890094612,0.0,Pafos FC.png
+Rui Silva,Sporting CP,GK,0,0.2151823015870319,0.0,Sporting CP.png
+David Luiz,Pafos FC,DF,0,0.11508874545773469,0.0,Pafos FC.png
+Neofytos Michael,Pafos FC,GK,0,0.08547368124137172,0.0,Pafos FC.png
+Pedro Rodrigues,Pafos FC,MF,0,0.19958052173436147,0.0,Pafos FC.png
+Hidemasa Morita,Sporting CP,MF,1,1.060191029258083,0.0,Sporting CP.png
+Ivan Šunjić,Pafos FC,MF,0,0.08547368124137172,0.0,Pafos FC.png
+Anderson,Pafos FC,FW,0,0.09976687804180882,0.0,Pafos FC.png
+Jajá,Pafos FC,"FW,MF",0,0.07814625603816293,0.0,Pafos FC.png
+Kostas Pileas,Pafos FC,DF,0,0.08807346890273633,0.0,Pafos FC.png
+Domingos Quina,Pafos FC,"MF,FW",0,0.09447827143051417,0.0,Pafos FC.png
+Bruno Felipe Souza da Silva,Pafos FC,DF,0,0.17123037901115618,0.0,Pafos FC.png
+Mons Bassouamina,Pafos FC,FW,0,0.010354529632846974,0.0,Pafos FC.png
+Ken Sema,Pafos FC,"DF,MF",1,1.0696485693950268,0.0,Pafos FC.png
+Panagiotis Retsos,Olympiacos,DF,0,0.1288377396956895,0.0,Olympiacos.png
+João Pedro Araújo Correia,Pafos FC,DF,0,0.10211051907980662,0.0,Pafos FC.png
+Dani García,Olympiacos,MF,0,0.08425691397813657,0.0,Olympiacos.png
+David Zima,Slavia Prague,DF,0,0.07080375625918973,0.0,Slavia Prague.png
+Christos Mouzakitis,Olympiacos,MF,0,0.15741973265718456,0.0,Olympiacos.png
+Andriy Lunin,Real Madrid,GK,0,0.18359154308896497,0.0,Real Madrid.png
+Francisco Ortega,Olympiacos,DF,0,0.14429281792568088,0.0,Olympiacos.png
+Lorenzo Pirola,Olympiacos,DF,0,0.10430940954759121,0.0,Olympiacos.png
+Daniel Podence,Olympiacos,"FW,MF",0,0.17858840350589486,0.0,Olympiacos.png
+Endrick,Real Madrid,FW,0,0.011645288817293572,0.0,Real Madrid.png
+Tomáš Chorý,Slavia Prague,FW,0,0.09532660706619522,0.0,Slavia Prague.png
+Costinha,Olympiacos,DF,0,0.09078094145330509,0.0,Olympiacos.png
+Gelson Martins,Olympiacos,FW,0,0.1731963295265681,0.0,Olympiacos.png
+Gonçalo Inácio,Sporting CP,DF,0,0.2882327938425372,0.0,Sporting CP.png
+Youssoupha Sanyang,Slavia Prague,"FW,DF",0,0.12920478075195152,0.0,Slavia Prague.png
+Weston McKennie,Juventus,"DF,MF",0,0.293033446271058,0.0,Juventus.png
+Alexis Mac Allister,Liverpool,MF,0,0.27129561600033164,0.0,Liverpool.png
+Gerard Martín,Barcelona,DF,0,0.1510657779582711,0.0,Barcelona.png
+Joan García,Barcelona,GK,0,0.3684344026374109,0.0,Barcelona.png
+Dani Olmo,Barcelona,"MF,FW",0,0.017316115628348866,0.0,Barcelona.png
+Andreas Christensen,Barcelona,"DF,MF",0,0.12008952922180251,0.0,Barcelona.png
+Marc Casado,Barcelona,MF,0,0.0538807335724794,0.0,Barcelona.png
+Ronald Araújo,Barcelona,DF,0,0.25920281851403726,0.0,Barcelona.png
+Ferrán Torres,Barcelona,FW,0,0.3438831565196135,0.0,Barcelona.png
+Robert Lewandowski,Barcelona,FW,0,0.40414266660049103,0.0,Barcelona.png
+Frenkie de Jong,Barcelona,MF,0,0.27183961067640205,0.0,Barcelona.png
+Wojciech Szczęsny,Barcelona,GK,0,0.3684344026374109,0.0,Barcelona.png
+Eric García,Barcelona,"DF,MF",0,0.1997275209430097,0.0,Barcelona.png
+Pau Cubarsí,Barcelona,DF,0,0.16795423151156402,0.0,Barcelona.png
+Wisdom Mike,Bayern Munich,FW,0,0.009991604868314448,0.0,Bayern Munich.png
+Hiroki Ito,Bayern Munich,DF,0,0.0030495468952920035,0.0,Bayern Munich.png
+Alphonso Davies,Bayern Munich,FW,0,0.19059668095575016,0.0,Bayern Munich.png
+Sacha Boey,Bayern Munich,DF,0,0.14785554028769973,0.0,Bayern Munich.png
+Josip Stanišić,Bayern Munich,DF,0,0.34042078658233665,0.0,Bayern Munich.png
+Raphinha,Barcelona,"FW,MF",0,0.6895617807907386,0.0,Barcelona.png
+Marc Bernal,Barcelona,MF,0,0.009938698380903927,0.0,Barcelona.png
+Raphaël Guerreiro,Bayern Munich,"DF,MF",0,1.0491819147659094,0.0,Bayern Munich.png
+Marcos Llorente,Atlético Madrid,"DF,MF",0,0.47699935775995106,0.0,Atlético Madrid.png
+Carlos Martín,Atlético Madrid,FW,0,0.0009956529093761944,0.0,Atlético Madrid.png
+Javi Galán,Atlético Madrid,DF,0,0.15495645940466884,0.0,Atlético Madrid.png
+Johnny Cardoso,Atlético Madrid,MF,0,0.12640226728314152,0.0,Atlético Madrid.png
+Clément Lenglet,Atlético Madrid,DF,0,0.4270596987691178,0.0,Atlético Madrid.png
+Marc Pubill,Atlético Madrid,DF,0,0.06901149486776759,0.0,Atlético Madrid.png
+José María Giménez,Atlético Madrid,DF,0,0.36317952075085286,0.0,Atlético Madrid.png
+Thiago Almada,Atlético Madrid,MF,0,0.01796602610036703,0.0,Atlético Madrid.png
+Dávid Hancko,Atlético Madrid,DF,0,0.3520964755869202,0.0,Atlético Madrid.png
+Conor Gallagher,Atlético Madrid,MF,0,0.18402366099073453,0.0,Atlético Madrid.png
+Alex Baena,Atlético Madrid,MF,0,0.08640615767060342,0.0,Atlético Madrid.png
+Matteo Ruggeri,Atlético Madrid,DF,0,0.29454340174351173,0.0,Atlético Madrid.png
+Jan Oblak,Atlético Madrid,GK,0,0.22368594246641066,0.0,Atlético Madrid.png
+Nahuel Molina,Atlético Madrid,DF,0,0.20435359286342358,0.0,Atlético Madrid.png
+Robin Le Normand,Atlético Madrid,DF,0,0.19598788414339055,0.0,Atlético Madrid.png
+Nicolás González,Atlético Madrid,"MF,DF",0,0.20241327372211873,0.0,Atlético Madrid.png
+Koke,Atlético Madrid,MF,0,0.21705221968114227,0.0,Atlético Madrid.png
+Lennart Karl,Bayern Munich,MF,0,0.29023935632461423,0.0,Bayern Munich.png
+Luis Díaz,Bayern Munich,FW,0,0.9425953478967171,0.0,Bayern Munich.png
+Alejandro Rego,Athletic Club,MF,0,0.18031875174611925,0.0,Athletic Club.png
+Fredrik André Bjørkan,Bodø/Glimt,DF,1,1.0,0.0,Bodø/Glimt.png
+Tomás Araújo,Benfica,DF,0,0.1199838205985598,0.0,Benfica.png
+Anatolii Trubin,Benfica,GK,0,0.08209555064709012,0.0,Benfica.png
+Richard Ríos,Benfica,MF,1,1.3512520490125781,0.0,Benfica.png
+Vangelis Pavlidis,Benfica,FW,0,0.12735516576893063,0.0,Benfica.png
+Nicolás Otamendi,Benfica,DF,0,0.10065065249482506,0.0,Benfica.png
+Amar Dedić,Benfica,DF,0,0.10651165118778502,0.0,Benfica.png
+Enzo Barrenechea,Benfica,MF,0,0.1199478272428348,0.0,Benfica.png
+Kasper Waarst Høgh,Bodø/Glimt,FW,1,1.0,0.0,Bodø/Glimt.png
+Samuel Dahl,Benfica,DF,0,0.20305178981741953,0.0,Benfica.png
+Patrick Berg,Bodø/Glimt,MF,1,1.0,0.0,Bodø/Glimt.png
+Reggie Walsh,Chelsea,MF,0,0.02903613065387689,0.0,Chelsea.png
+Cole Palmer,Chelsea,FW,0,0.3115877056144472,0.0,Chelsea.png
+Filip Jørgensen,Chelsea,GK,0,0.18419553418587575,0.0,Chelsea.png
+Marc Guiu,Chelsea,FW,0,0.10141102443941476,0.0,Chelsea.png
+Roméo Lavia,Chelsea,MF,0,0.06954033444592882,0.0,Chelsea.png
+Jorrel Hato,Chelsea,DF,0,0.4715953715298621,0.0,Chelsea.png
+Leandro Barreiro Martins,Benfica,MF,0,0.13732973096740084,0.0,Benfica.png
+António Silva,Benfica,DF,0,0.12136024408210552,0.0,Benfica.png
+Kim Min-jae,Bayern Munich,DF,0,0.07783932898126618,0.0,Bayern Munich.png
+Harry Kane,Bayern Munich,"FW,MF",0,0.7340404151981,0.0,Bayern Munich.png
+Nicolas Jackson,Bayern Munich,FW,1,1.080502091729429,0.0,Bayern Munich.png
+Leon Goretzka,Bayern Munich,MF,0,0.09308415234919618,0.0,Bayern Munich.png
+Tom Bischof,Bayern Munich,"DF,MF",0,0.010129867953514693,0.0,Bayern Munich.png
+Dayot Upamecano,Bayern Munich,DF,0,0.2897322971024135,0.0,Bayern Munich.png
+Aleksandar Pavlovic,Bayern Munich,MF,0,0.34335532945235536,0.0,Bayern Munich.png
+Manuel Neuer,Bayern Munich,GK,0,0.17867132338772945,0.0,Bayern Munich.png
+Joshua Kimmich,Bayern Munich,MF,0,0.7253954560155933,0.0,Bayern Munich.png
+Rodrigo Rego,Benfica,MF,0,0.000710911951309448,0.0,Benfica.png
+Franjo Ivanović,Benfica,FW,0,0.016468148628521053,0.0,Benfica.png
+José Neto,Benfica,MF,0,0.000710911951309448,0.0,Benfica.png
+Manuel Manu,Benfica,MF,0,0.000710911951309448,0.0,Benfica.png
+Tiago Freitas,Benfica,MF,0,0.000710911951309448,0.0,Benfica.png
+Gianluca Prestianni,Benfica,MF,0,0.020412937287115667,0.0,Benfica.png
+Henrique Araújo,Benfica,FW,0,0.003913207307646779,0.0,Benfica.png
+Andreas Schjelderup,Benfica,FW,0,0.06219689407919704,0.0,Benfica.png
+Dodi Lukebakio,Benfica,"FW,MF",0,0.44215251115750065,0.0,Benfica.png
+Juan Musso,Atlético Madrid,GK,0,0.18333221173156558,0.0,Atlético Madrid.png
+Unai Simón,Athletic Club,GK,0,0.07208035280087653,0.0,Athletic Club.png
+Benoît Badiashile,Chelsea,DF,0,0.1359628761194281,0.0,Chelsea.png
+Ethan Nwaneri,Arsenal,MF,0,0.08624019378748297,0.0,Arsenal.png
+Mika Godts,Ajax,"FW,MF",1,1.2107721895697732,0.0,Ajax.png
+Oscar Gloukh,Ajax,"FW,MF",0,0.2659091468393863,0.0,Ajax.png
+Youri Baas,Ajax,DF,0,0.06841359776373841,0.0,Ajax.png
+Marli Salmon,Arsenal,DF,0,0.00826408861835328,0.0,Arsenal.png
+Gabriel Jesus,Arsenal,FW,0,0.048195563698238936,0.0,Arsenal.png
+Max Dowman,Arsenal,FW,0,0.01814936208528304,0.0,Arsenal.png
+Andre Annous,Arsenal,FW,0,0.010279719988683348,0.0,Arsenal.png
+Noni Madueke,Arsenal,FW,0,0.4900906907406921,0.0,Arsenal.png
+Youri Regeer,Ajax,"MF,DF",0,0.051263172964483246,0.0,Ajax.png
+Piero Hincapié,Arsenal,DF,0,0.12151973226092401,0.0,Arsenal.png
+William Saliba,Arsenal,DF,0,0.30805160342523935,0.0,Arsenal.png
+Christian Nørgaard,Arsenal,"MF,DF",0,0.21605325775381745,0.0,Arsenal.png
+Cristhian Mosquera,Arsenal,DF,0,0.2273515447140203,0.0,Arsenal.png
+Viktor Gyökeres,Arsenal,FW,0,0.34903612265011674,0.0,Arsenal.png
+Ben White,Arsenal,DF,0,0.06130347355869567,0.0,Arsenal.png
+Jurriën Timber,Arsenal,DF,0,0.3110745408373225,0.0,Arsenal.png
+Davy Klaassen,Ajax,MF,0,0.0899792958264224,0.0,Ajax.png
+Anton Gaaei,Ajax,DF,0,0.30178452904754605,0.0,Ajax.png
+Mikel Merino,Arsenal,"MF,FW",0,0.38794694182289313,0.0,Arsenal.png
+Kasper Dolberg,Ajax,FW,0,0.035273462915026685,0.0,Ajax.png
+Aaron Bouwman,Ajax,DF,0,0.12422473951089,0.0,Ajax.png
+Steven Berghuis,Ajax,FW,0,0.11768006534439866,0.0,Ajax.png
+Gerald Alders,Ajax,DF,0,0.027357358364195995,0.0,Ajax.png
+Remko Pasveer,Ajax,GK,0,0.30271209916927005,0.0,Ajax.png
+Oliver Edvardsen,Ajax,FW,0,0.1759754260590462,0.0,Ajax.png
+Rayane Bounida,Ajax,"MF,FW",0,0.10610362376332125,0.0,Ajax.png
+James McConnell,Ajax,MF,0,0.03776756504615582,0.0,Ajax.png
+Owen Wijndal,Ajax,DF,0,0.16510395372336562,0.0,Ajax.png
+Ko Itakura,Ajax,"DF,MF",0,0.15509850982651188,0.0,Ajax.png
+Wout Weghorst,Ajax,FW,0,0.29771821426591144,0.0,Ajax.png
+Kenneth Taylor,Ajax,MF,0,0.16206085367819412,0.0,Ajax.png
+Vitezslav Jaros,Ajax,GK,0,0.15910294318283674,0.0,Ajax.png
+Kian Fitz-Jim,Ajax,"MF,FW",0,0.006659428350160201,0.0,Ajax.png
+Josip Šutalo,Ajax,DF,0,0.1742694286841683,0.0,Ajax.png
+Raúl Moro,Ajax,"FW,MF",0,0.0995889772605878,0.0,Ajax.png
+Jorthy Mokio,Ajax,"MF,DF",0,0.11511428175294512,0.0,Ajax.png
+David Raya,Arsenal,GK,0,0.19091961479144806,0.0,Arsenal.png
+Giorgio Scalvini,Atalanta,DF,0,0.009742592355275071,0.0,Atalanta.png
+Iñigo Ruiz de Galarreta,Athletic Club,MF,0,0.07541410746731124,0.0,Athletic Club.png
+Oihan Sancet,Athletic Club,MF,0,0.20283862443969558,0.0,Athletic Club.png
+Aymeric Laporte,Athletic Club,DF,0,0.08411970930613076,0.0,Athletic Club.png
+Asier Hierro,Athletic Club,"FW,MF",0,0.008490360222690218,0.0,Athletic Club.png
+Nico Williams,Athletic Club,FW,0,0.339592876279068,0.0,Athletic Club.png
+Iñaki Williams,Athletic Club,FW,0,0.06156247610964386,0.0,Athletic Club.png
+Nicolás Serrano,Athletic Club,"FW,MF",0,0.00855436887748017,0.0,Athletic Club.png
+Yuri Berchiche,Athletic Club,DF,0,0.22974238870079217,0.0,Athletic Club.png
+Mikel Vesga,Athletic Club,MF,0,0.13617993601313763,0.0,Athletic Club.png
+Adama Boiro,Athletic Club,DF,0,0.22716984598182968,0.0,Athletic Club.png
+Selton Sánchez,Athletic Club,MF,0,0.014040403852699456,0.0,Athletic Club.png
+Jesús Areso,Athletic Club,DF,0,0.19248443227840434,0.0,Athletic Club.png
+Daniel Vivian,Athletic Club,DF,0,0.10630388793067187,0.0,Athletic Club.png
+Aitor Paredes,Athletic Club,DF,0,0.1376507552734521,0.0,Athletic Club.png
+Roberto Navarro,Athletic Club,"FW,MF",0,0.14070846943043233,0.0,Athletic Club.png
+Gorka Guruzeta,Athletic Club,FW,0,0.15230525697045427,0.0,Athletic Club.png
+Andoni Gorosabel,Athletic Club,DF,0,0.125774237185743,0.0,Athletic Club.png
+Unai Gómez,Athletic Club,"FW,MF",0,0.07043179406106245,0.0,Athletic Club.png
+Iñigo Lekue,Athletic Club,DF,0,0.07378586297871537,0.0,Athletic Club.png
+Ibon Sánchez,Athletic Club,FW,0,0.007293811247979345,0.0,Athletic Club.png
+Daniel Maldini,Atalanta,FW,0,0.10098361177237365,0.0,Atalanta.png
+Isak Hien,Atalanta,DF,0,0.2910528202337288,0.0,Atalanta.png
+Nicola Zalewski,Atalanta,"MF,DF",0,0.03804687581232201,0.0,Atalanta.png
+Sead Kolašinac,Atalanta,DF,0,0.1397624869482023,0.0,Atalanta.png
+Marco Brescianini,Atalanta,"MF,FW",0,0.010127981427091272,0.0,Atalanta.png
+Kamaldeen Sulemana,Atalanta,"FW,MF",0,0.015816937822728555,0.0,Atalanta.png
+Gianluca Scamacca,Atalanta,FW,0,0.06737041275527456,0.0,Atalanta.png
+Lazar Samardzic,Atalanta,"FW,MF",0,0.015184641132656947,0.0,Atalanta.png
+Mario Pašalić,Atalanta,MF,0,0.2707954164793142,0.0,Atalanta.png
+Lorenzo Bernasconi,Atalanta,"DF,MF",0,0.45047137187607383,0.0,Atalanta.png
+Maroan Sannadi,Athletic Club,FW,0,0.11236608341746125,0.0,Athletic Club.png
+Honest Ahanor,Atalanta,DF,0,0.25284307791726596,0.0,Atalanta.png
+Davide Zappacosta,Atalanta,"DF,MF",0,0.7214379387767583,0.0,Atalanta.png
+Nikola Krstović,Atalanta,FW,0,0.19560916595413758,0.0,Atalanta.png
+Odilon Kossounou,Atalanta,DF,0,0.16840444346779182,0.0,Atalanta.png
+Berat Djimsiti,Atalanta,DF,0,0.29968332626955835,0.0,Atalanta.png
+Marco Carnesecchi,Atalanta,GK,0,0.17334868423048583,0.0,Atalanta.png
+Raoul Bellanova,Atalanta,"DF,MF",0,0.33457832715754726,0.0,Atalanta.png
+Liam Delap,Chelsea,FW,0,0.036222099528334925,0.0,Chelsea.png
+Facundo Buonanotte,Chelsea,MF,0,0.07919925359669762,0.0,Chelsea.png
+Virgil van Dijk,Liverpool,DF,0,0.3307493305747966,0.0,Liverpool.png
+Carlos Augusto,Inter,DF,0,0.2174514302179388,0.0,Inter.png
+Francesco Acerbi,Inter,DF,0,0.13000349050405263,0.0,Inter.png
+Stefan de Vrij,Inter,DF,0,0.32180743806220885,0.0,Inter.png
+Luis Henrique,Inter,DF,0,0.061007045531779804,0.0,Inter.png
+Davide Frattesi,Inter,MF,0,0.1961019957546666,0.0,Inter.png
+Denzel Dumfries,Inter,DF,0,0.8743501036252079,0.0,Inter.png
+Lautaro Martínez,Inter,FW,0,0.873478746504926,0.0,Inter.png
+Nicolò Barella,Inter,MF,0,0.404217529558463,0.0,Inter.png
+Piotr Zieliński,Inter,MF,0,0.3491579557880925,0.0,Inter.png
+Matteo Darmian,Inter,DF,0,0.014404497925246423,0.0,Inter.png
+Petar Sucic,Inter,MF,0,0.2075563167576978,0.0,Inter.png
+Yann Sommer,Inter,GK,0,0.17261317042639526,0.0,Inter.png
+Federico Dimarco,Inter,DF,0,0.48964093706873385,0.0,Inter.png
+Manuel Akanji,Inter,DF,0,0.22892937947493755,0.0,Inter.png
+Gleison Bremer,Juventus,DF,0,0.15119296987304837,0.0,Juventus.png
+Daniele Rugani,Juventus,DF,0,0.09109928526347796,0.0,Juventus.png
+Mattia Perin,Juventus,GK,0,0.4283387650734361,0.0,Juventus.png
+Henrikh Mkhitaryan,Inter,MF,0,0.12366390783208239,0.0,Inter.png
+Barış Alper Yılmaz,Galatasaray,"FW,MF",0,0.36554529610109754,0.0,Galatasaray.png
+Federico Gatti,Juventus,DF,0,0.35744226577290344,0.0,Juventus.png
+Eren Elmalı,Galatasaray,"DF,MF",0,0.013338868665538215,0.0,Galatasaray.png
+Ahmed Kutucu,Galatasaray,"FW,MF",0,0.02093608091908904,0.0,Galatasaray.png
+Günay Güvenç,Galatasaray,GK,0,0.020111176233545733,0.0,Galatasaray.png
+Berkan Kutlu,Galatasaray,MF,0,0.0020582360644306116,0.0,Galatasaray.png
+Wilfried Singo,Galatasaray,DF,0,0.3841039587885723,0.0,Galatasaray.png
+Kaan Ayhan,Galatasaray,"MF,FW",0,0.12942561278579426,0.0,Galatasaray.png
+Victor Osimhen,Galatasaray,FW,0,0.33371290454546365,0.0,Galatasaray.png
+İlkay Gündoğan,Galatasaray,MF,0,0.5608531805504561,0.0,Galatasaray.png
+Yunus Akgün,Galatasaray,"FW,MF",0,0.4472255516118676,0.0,Galatasaray.png
+Uğurcan Çakır,Galatasaray,GK,0,0.146968949194731,0.0,Galatasaray.png
+Abdülkerim Bardakcı,Galatasaray,DF,0,0.24334757738763327,0.0,Galatasaray.png
+Lucas Torreira,Galatasaray,MF,0,0.14915800045550542,0.0,Galatasaray.png
+Gabriel Sara,Galatasaray,MF,0,0.33755305171006716,0.0,Galatasaray.png
+Davinson Sánchez,Galatasaray,DF,0,0.14629349530986735,0.0,Galatasaray.png
+Roland Sallai,Galatasaray,"DF,FW",0,0.27042392524743797,0.0,Galatasaray.png
+Ismail Jakobs,Galatasaray,DF,0,0.3793240940173627,0.0,Galatasaray.png
+Mauro Icardi,Galatasaray,FW,0,0.15074763704155647,0.0,Galatasaray.png
+Filip Kostić,Juventus,DF,0,0.11311487532140557,0.0,Juventus.png
+Juan David Cabal,Juventus,DF,0,0.023297744113582573,0.0,Juventus.png
+Viktor Claesson,FC Copenhagen,"FW,MF",0,0.1770543105036194,0.0,FC Copenhagen.png
+Joe Gomez,Liverpool,DF,0,0.07763210879060135,0.0,Liverpool.png
+Claudio Echeverri,Leverkusen,MF,0,0.0324691480862249,0.0,Leverkusen.png
+Ernest Poku,Leverkusen,"MF,DF",0,0.2502184000287555,0.0,Leverkusen.png
+Christian Kofane,Leverkusen,FW,1,1.4794837279554032,0.0,Leverkusen.png
+Aleix García,Leverkusen,MF,0,0.31075689402600515,0.0,Leverkusen.png
+Mark Flekken,Leverkusen,GK,0,0.20758116515175434,0.0,Leverkusen.png
+Loïc Bade,Leverkusen,DF,0,0.15161752386719324,0.0,Leverkusen.png
+Rio Ngumoha,Liverpool,FW,0,0.016219170974587145,0.0,Liverpool.png
+Jeremie Frimpong,Liverpool,"DF,FW",0,0.2810402502686261,0.0,Liverpool.png
+Edmond Tapsoba,Leverkusen,DF,0,0.23323905197642136,0.0,Leverkusen.png
+Federico Chiesa,Liverpool,"FW,MF",0,0.17013835847642855,0.0,Liverpool.png
+Alisson,Liverpool,GK,0,0.3838271839199053,0.0,Liverpool.png
+Giorgi Mamardashvili,Liverpool,GK,0,0.26005861225002563,0.0,Liverpool.png
+Milos Kerkez,Liverpool,DF,0,0.23650266907894718,0.0,Liverpool.png
+Curtis Jones,Liverpool,"MF,DF",0,0.24913993380958527,0.0,Liverpool.png
+Alexander Isak,Liverpool,FW,0,0.23612241066025763,0.0,Liverpool.png
+Conor Bradley,Liverpool,DF,0,0.2713417300333506,0.0,Liverpool.png
+Jarell Quansah,Leverkusen,DF,0,0.42037979481442295,0.0,Leverkusen.png
+Malik Tillman,Leverkusen,MF,0,0.21940765079721916,0.0,Leverkusen.png
+Edon Zhegrova,Juventus,MF,0,0.09091064507021718,0.0,Juventus.png
+Lucas Vázquez,Leverkusen,DF,0,0.22240606958614342,0.0,Leverkusen.png
+Loïs Openda,Juventus,"FW,MF",0,0.4653806278878478,0.0,Juventus.png
+Michele Di Gregorio,Juventus,GK,0,0.2814990085157605,0.0,Juventus.png
+Francisco Conceição,Juventus,MF,0,0.3233575033014003,0.0,Juventus.png
+Vasilije Adžić,Juventus,MF,0,0.012567275564708562,0.0,Juventus.png
+Manuel Locatelli,Juventus,MF,0,0.32937903082521425,0.0,Juventus.png
+Teun Koopmeiners,Juventus,"DF,MF",0,0.2633790443188788,0.0,Juventus.png
+Jonathan David,Juventus,"FW,MF",0,0.2700589006744911,0.0,Juventus.png
+Axel Tapé,Leverkusen,DF,0,0.0914851212896352,0.0,Leverkusen.png
+Arthur,Leverkusen,DF,0,0.2623237902720311,0.0,Leverkusen.png
+Jeremiah Mensah,Leverkusen,MF,0,0.00960022331677076,0.0,Leverkusen.png
+Nathan Tella,Leverkusen,MF,0,0.011683217049767188,0.0,Leverkusen.png
+Jeanuël Belocian,Leverkusen,DF,0,0.10887351130025416,0.0,Leverkusen.png
+Ezequiél Fernández,Leverkusen,MF,0,0.38901948974985445,0.0,Leverkusen.png
+Robert Andrich,Leverkusen,"DF,MF",0,0.37624380864148493,0.0,Leverkusen.png
+Patrik Schick,Leverkusen,FW,0,0.2696316337150605,0.0,Leverkusen.png
+Eliesse Ben Seghir,Leverkusen,"MF,FW",0,0.01576369347430166,0.0,Leverkusen.png
+Arda Ünyay,Galatasaray,DF,0,0.030539787762707864,0.0,Galatasaray.png
+Dominik Kotarski,FC Copenhagen,GK,0,0.09134034865897957,0.0,FC Copenhagen.png
+Pedro Neto,Chelsea,FW,0,0.3187891078912223,0.0,Chelsea.png
+Christos Tzolis,Club Brugge,"FW,MF",1,1.486247763170086,0.0,Club Brugge.png
+Hugo Vetlesen,Club Brugge,"MF,FW",0,0.005271814753378379,0.0,Club Brugge.png
+Romeo Vermant,Club Brugge,FW,0,0.010617127557817801,0.0,Club Brugge.png
+Raphael Onyedika,Club Brugge,MF,0,0.2093742932713237,0.0,Club Brugge.png
+Bjorn Meijer,Club Brugge,DF,0,0.03399066772193176,0.0,Club Brugge.png
+Kyriani Sabbe,Club Brugge,DF,0,0.15479428726019448,0.0,Club Brugge.png
+Nordin Jackers,Club Brugge,GK,0,0.12189172254748708,0.0,Club Brugge.png
+Mamadou Diakhon,Club Brugge,"FW,MF",0,0.0046460792969155815,0.0,Club Brugge.png
+Aleksandar Stanković,Club Brugge,MF,0,0.19583965170039608,0.0,Club Brugge.png
+Hugo Siquet,Club Brugge,DF,0,0.23609953664585143,0.0,Club Brugge.png
+Joel Ordóñez,Club Brugge,DF,0,0.08206203479848372,0.0,Club Brugge.png
+Brandon Mechele,Club Brugge,DF,0,0.0981475307706102,0.0,Club Brugge.png
+Niklas Süle,Dortmund,DF,0,0.15906697075675652,0.0,Dortmund.png
+Emre Can,Dortmund,DF,0,0.1421302711119386,0.0,Dortmund.png
+Yan Couto,Dortmund,DF,0,0.8172834339485416,0.0,Dortmund.png
+Carney Chukwuemeka,Dortmund,MF,1,1.094049243643455,0.0,Dortmund.png
+Fábio Silva,Dortmund,"FW,MF",1,1.0767567647106981,0.0,Dortmund.png
+Lynnt Audoor,Club Brugge,MF,0,0.029063117942234637,0.0,Club Brugge.png
+Jorne Spileers,Club Brugge,DF,0,0.009958545072679683,0.0,Club Brugge.png
+Julian Brandt,Dortmund,MF,0,0.3562830321418634,0.0,Dortmund.png
+Alejandro Garnacho,Chelsea,FW,0,0.2140998307179697,0.0,Chelsea.png
+João Pedro,Chelsea,"FW,MF",0,0.3074073394120427,0.0,Chelsea.png
+Tyrique George,Chelsea,FW,0,0.08775918597392336,0.0,Chelsea.png
+Tosin Adarabioyo,Chelsea,DF,0,0.33311089040427017,0.0,Chelsea.png
+Joshua Acheampong,Chelsea,DF,0,0.029212192784635813,0.0,Chelsea.png
+Estêvão Willian,Chelsea,"FW,MF",0,0.5266807970089598,0.0,Chelsea.png
+Robert Sánchez,Chelsea,GK,0,0.3292459581629282,0.0,Chelsea.png
+Jamie Gittens,Chelsea,FW,0,0.4889638993966899,0.0,Chelsea.png
+Marc Cucurella,Chelsea,DF,0,0.588998664045281,0.0,Chelsea.png
+Zaid Romero,Club Brugge,DF,0,0.003937177774016398,0.0,Club Brugge.png
+Trevoh Chalobah,Chelsea,DF,0,0.19465463151513754,0.0,Chelsea.png
+Moisés Caicedo,Chelsea,MF,0,0.24484859287866192,0.0,Chelsea.png
+Simon Mignolet,Club Brugge,GK,0,0.15426965617674418,0.0,Club Brugge.png
+Kaye Furo,Club Brugge,FW,0,0.01622257013380606,0.0,Club Brugge.png
+Dani van den Heuvel,Club Brugge,GK,0,0.1316014617997532,0.0,Club Brugge.png
+Shandre Campbell,Club Brugge,DF,0,0.0021334893724360327,0.0,Club Brugge.png
+Cisse Sandra,Club Brugge,MF,0,0.06840373163871037,0.0,Club Brugge.png
+Nico Schlotterbeck,Dortmund,DF,0,0.21551025935258994,0.0,Dortmund.png
+Ramy Bensebaini,Dortmund,DF,0,0.19232628422733392,0.0,Dortmund.png
+Jordan Larsson,FC Copenhagen,MF,0,0.29607528159993685,0.0,FC Copenhagen.png
+Viktor Dadason,FC Copenhagen,FW,0,0.17042970097000684,0.0,FC Copenhagen.png
+Jean Mattéo Bahoya,Eint Frankfurt,"FW,DF",0,0.043039289188263184,0.0,Eint Frankfurt.png
+Robin Koch,Eint Frankfurt,DF,0,0.07186598688641818,0.0,Eint Frankfurt.png
+Ansgar Knauff,Eint Frankfurt,FW,1,1.2796422715757119,0.0,Eint Frankfurt.png
+Birger Meling,FC Copenhagen,DF,0,0.05477729944618316,0.0,FC Copenhagen.png
+Andreas Cornelius,FC Copenhagen,FW,0,0.011559013024111477,0.0,FC Copenhagen.png
+Munashe Garan'anga,FC Copenhagen,DF,0,0.006159343074798969,0.0,FC Copenhagen.png
+Thomas Delaney,FC Copenhagen,MF,0,0.048349575782629745,0.0,FC Copenhagen.png
+William Clem,FC Copenhagen,MF,0,0.21272423299092524,0.0,FC Copenhagen.png
+Arthur Theate,Eint Frankfurt,DF,0,0.08921632850307797,0.0,Eint Frankfurt.png
+Robert,FC Copenhagen,MF,0,0.1584493879640148,0.0,FC Copenhagen.png
+Youssoufa Moukoko,FC Copenhagen,FW,0,0.10486418196782842,0.0,FC Copenhagen.png
+Lukas Lerager,FC Copenhagen,MF,0,0.21197186983322733,0.0,FC Copenhagen.png
+Pantelis Hatzidiakos,FC Copenhagen,DF,0,0.12762226341732097,0.0,FC Copenhagen.png
+Mads Emil Madsen,FC Copenhagen,MF,0,0.008700519824638807,0.0,FC Copenhagen.png
+Mohamed Elyounoussi,FC Copenhagen,"FW,MF",0,0.22760496707309225,0.0,FC Copenhagen.png
+Gabriel Pereira,FC Copenhagen,DF,0,0.11068018000210851,0.0,FC Copenhagen.png
+Ellyes Skhiri,Eint Frankfurt,MF,0,0.052961477820882626,0.0,Eint Frankfurt.png
+Jonathan Burkardt,Eint Frankfurt,FW,1,1.374804888551788,0.0,Eint Frankfurt.png
+Daniel Svensson,Dortmund,DF,0,0.16760589855389277,0.0,Dortmund.png
+Michy Batshuayi,Eint Frankfurt,"MF,FW",0,0.08012648390457235,0.0,Eint Frankfurt.png
+Felix Nmecha,Dortmund,MF,0,0.5806078203120468,0.0,Dortmund.png
+Gregor Kobel,Dortmund,GK,0,0.17037761546564595,0.0,Dortmund.png
+Waldemar Anton,Dortmund,DF,0,0.2001206921926373,0.0,Dortmund.png
+Kauã Santos,Eint Frankfurt,GK,0,0.12538085543323169,0.0,Eint Frankfurt.png
+Jessic Ngankam,Eint Frankfurt,FW,0,0.001358465874235125,0.0,Eint Frankfurt.png
+Oscar Højlund,Eint Frankfurt,MF,0,0.0208099402859159,0.0,Eint Frankfurt.png
+Aurélio Buta,Eint Frankfurt,DF,0,0.010576283799942812,0.0,Eint Frankfurt.png
+Rasmus Kristensen,Eint Frankfurt,"DF,MF",0,0.3438198900340507,0.0,Eint Frankfurt.png
+Nnamdi Collins,Eint Frankfurt,DF,0,0.14662956809298436,0.0,Eint Frankfurt.png
+Mahmoud Dahoud,Eint Frankfurt,MF,0,0.05927036082166178,0.0,Eint Frankfurt.png
+Can Uzun,Eint Frankfurt,"MF,FW",0,0.030269222410028097,0.0,Eint Frankfurt.png
+Aurele Amenda,Eint Frankfurt,DF,0,0.010329523695598374,0.0,Eint Frankfurt.png
+Michael Zetterer,Eint Frankfurt,GK,0,0.1123284342852984,0.0,Eint Frankfurt.png
+Hugo Larsson,Eint Frankfurt,MF,0,0.09856097483994872,0.0,Eint Frankfurt.png
+Mario Götze,Eint Frankfurt,MF,1,1.3664018854062028,0.0,Eint Frankfurt.png
+Ritsu Doan,Eint Frankfurt,"FW,DF",0,0.2719905485346465,0.0,Eint Frankfurt.png
+Nicolas Pépé,Villarreal,"FW,MF",1,1.0,0.0,Villarreal.png
+Ulrik Saltnes,Bodø/Glimt,MF,0,0.0,,Bodø/Glimt.png
+Magnus Riisnæs,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Brede Moe,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Daniel Bassi,Bodø/Glimt,"FW,MF",0,0.0,,Bodø/Glimt.png
+Anders Klynge,Bodø/Glimt,"MF,DF",0,0.0,,Bodø/Glimt.png
+Mathias Jørgensen,Bodø/Glimt,"FW,MF",0,0.0,,Bodø/Glimt.png
+Jostein Gundersen,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Villads Nielsen,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Isak Määttä,Bodø/Glimt,"DF,FW",0,0.0,,Bodø/Glimt.png
+Ole Didrik Blomberg,Bodø/Glimt,"FW,MF",0,0.0,,Bodø/Glimt.png
+Sondre Auklend,Bodø/Glimt,"FW,MF",0,0.0,,Bodø/Glimt.png
+Haitam Aleesami,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Fredrik Sjøvold,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Jens Petter Hauge,Bodø/Glimt,"FW,MF",0,0.0,,Bodø/Glimt.png
+Odin Lurås Bjørtuft,Bodø/Glimt,DF,0,0.0,,Bodø/Glimt.png
+Andreas Helmersen,Bodø/Glimt,FW,0,0.0,,Bodø/Glimt.png
+Nikita Haikin,Bodø/Glimt,GK,0,0.0,,Bodø/Glimt.png
+Sondre Brunstad Fet,Bodø/Glimt,MF,0,0.0,,Bodø/Glimt.png
+Lev Kurgin,Qaırat Almaty,DF,0,0.0,,
+Azamat Tuyakbaev,Qaırat Almaty,"FW,MF",0,0.0,,
+Sherhan Kalmurza,Qaırat Almaty,GK,0,0.0,,
+Adilet Sadybekov,Qaırat Almaty,MF,0,0.0,,
+Alyaksandr Martynovich,Qaırat Almaty,DF,0,0.0,,
+Dan Glazer,Qaırat Almaty,MF,0,0.0,,
+Jug Stanojev,Qaırat Almaty,"MF,FW",0,0.0,,
+Olzhas Baibek,Qaırat Almaty,MF,0,0.0,,
+Ofri Arad,Qaırat Almaty,MF,0,0.0,,
+Temirlan Anarbekov,Qaırat Almaty,GK,0,0.0,,
+Dastan Satpayev,Qaırat Almaty,FW,0,0.0,,
+Luís Mata,Qaırat Almaty,DF,0,0.0,,
+Edimilson Filho,Qaırat Almaty,FW,0,0.0,,
+Erkin Tapalov,Qaırat Almaty,DF,0,0.0,,
+Yegor Sorokin,Qaırat Almaty,DF,0,0.0,,
+Alexandr Mrynskiy,Qaırat Almaty,"DF,FW",0,0.0,,
+Damir Kasabulat,Qaırat Almaty,MF,0,0.0,,
+Valeriy Gromyko,Qaırat Almaty,"FW,MF",0,0.0,,
+Jorginho Costa,Qaırat Almaty,"MF,FW",0,0.0,,
+Louis Patris,Unions SG,DF,0,0.0,,
+Raul Florucz,Unions SG,FW,0,0.0,,
+Ross Sykes,Unions SG,DF,0,0.0,,
+Mathias Rasmussen,Unions SG,MF,0,0.0,,
+Fedde Leysen,Unions SG,DF,0,0.0,,
+Anouar Ait El Hadj,Unions SG,"MF,FW",0,0.0,,
+Marc Giger,Unions SG,"FW,MF",0,0.0,,
+Kjell Scherpen,Unions SG,GK,0,0.0,,
+Ousseynou Niang,Unions SG,"DF,FW",0,0.0,,
+Kevin Mac Allister,Unions SG,DF,0,0.0,,
+Anan Khalaili,Unions SG,"DF,FW",0,0.0,,
+Kamiel Van De Perre,Unions SG,MF,0,0.0,,
+Promise David,Unions SG,FW,0,0.0,,
+Christian Burgess,Unions SG,DF,0,0.0,,
+Arnau Tenas,Villarreal,GK,0,0.0,,Villarreal.png
+Gerard Moreno,Villarreal,FW,0,0.0,,Villarreal.png
+Manor Solomon,Villarreal,MF,0,0.0,,Villarreal.png
+Pau Navarro,Villarreal,DF,0,0.0,,Villarreal.png
+Thomas Partey,Villarreal,MF,0,0.0,,Villarreal.png
+Rafa Marín,Villarreal,DF,0,0.0,,Villarreal.png
+Ayoze Pérez,Villarreal,FW,0,0.0,,Villarreal.png
+Juan Foyth,Villarreal,DF,0,0.0,,Villarreal.png
+Daniel Parejo,Villarreal,MF,0,0.0,,Villarreal.png
+Tani Oluwaseyi,Villarreal,FW,0,0.0,,Villarreal.png
+Santiago Mouriño,Villarreal,DF,0,0.0,,Villarreal.png
+Georges Mikautadze,Villarreal,FW,0,0.0,,Villarreal.png
+Luiz Lúcio Reis Júnior,Villarreal,GK,0,0.0,,Villarreal.png
+Tajon Buchanan,Villarreal,"MF,FW",0,0.0,,Villarreal.png
+Renato Veiga,Villarreal,DF,0,0.0,,Villarreal.png
+Alberto Moleiro,Villarreal,MF,0,0.0,,Villarreal.png
+Pape Gueye,Villarreal,MF,0,0.0,,Villarreal.png
+Santi Comesaña,Villarreal,MF,0,0.0,,Villarreal.png
+Sergi Cardona,Villarreal,DF,0,0.0,,Villarreal.png
