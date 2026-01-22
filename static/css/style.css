@@ -1,4 +1,4 @@
-/* CSS custom properties used to keep colors, spacing and layout consistent across the site */
+/* --- Variables and base --- */
 :root {
   --bg: #041018;
   --panel: #0b1620;
@@ -9,7 +9,7 @@
   --maxw: 1100px;
 }
 section {
-  scroll-margin-top: 100px; /* Offset for anchor links to prevent sections from being hidden behind the sticky header */
+  scroll-margin-top: 100px;
   padding-top: 20px;
   margin-bottom: 60px;
 }
@@ -18,7 +18,7 @@ section {
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth; /* Enable smooth scrolling when navigating through anchor links */
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -185,7 +185,7 @@ section {
   padding-top: 32px;
   margin-bottom: 80px;
 }
-/* Two-column grid layout for method explanation cards */
+/* Method card container */
 .method-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -193,7 +193,6 @@ section {
   margin-top: 2rem;
 }
 
-/* Make the third method item span the full width of the grid */
 #method .method-card .method-item:nth-child(3) {
   grid-column: 1 / -1;
   max-width: 100%;
@@ -292,7 +291,8 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--muted);
   width: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    5px 5px 10px rgba(0, 0, 0, 0.3),
     -5px -5px 10px rgba(255, 255, 255, 0.01);
 }
 
@@ -365,7 +365,9 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--muted);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .result:hover {
@@ -418,8 +420,122 @@ footer {
   padding-bottom: 24px;
 }
 
+/* --- Results Page Filters --- */
+.filter-controls {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-group {
+  margin-bottom: 16px;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.slider-input {
+  flex: 1;
+  height: 6px;
+  border-radius: 5px;
+  background: #07141f;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(23, 195, 178, 0.6);
+}
+
+.slider-input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px rgba(23, 195, 178, 0.6);
+}
+
+.slider-value {
+  min-width: 80px;
+  padding: 6px 12px;
+  background: #07141f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #07141f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(23, 195, 178, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Media Queries --- */
-/* Responsive adjustments for tablets and mobile devices */
 @media (max-width: 1000px) {
   .hero {
     height: auto;
