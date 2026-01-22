@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -52,198 +52,371 @@
               <button data-chart="mvp">PotT</button>
             </div>
 
+            <!-- Contrôles de filtrage -->
+            <div class="filter-controls">
+              <!-- Slider pour Winner -->
+              <div id="winner-controls" class="filter-group">
+                <label class="filter-label">Number of teams to display:</label>
+                <div class="slider-container">
+                  <input 
+                    type="range" 
+                    id="team-slider" 
+                    class="slider-input" 
+                    min="5" 
+                    max="33" 
+                    value="20"
+                  />
+                  <span class="slider-value" id="slider-value">Top 20</span>
+                </div>
+              </div>
+
+              <!-- Filtres pour Top Scorer / Top Assist / MVP -->
+              <div id="player-controls" style="display: none;">
+                <div class="filter-grid">
+                  <div class="filter-group">
+                    <label class="filter-label" for="player-search">Search by player name:</label>
+                    <input 
+                      type="text" 
+                      id="player-search" 
+                      class="search-input" 
+                      placeholder="Type player name..."
+                    />
+                  </div>
+                  <div class="filter-group">
+                    <label class="filter-label" for="team-search">Search by team:</label>
+                    <input 
+                      type="text" 
+                      id="team-search" 
+                      class="search-input" 
+                      placeholder="Type team name..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div id="results-chart"></div>
           </section>
         </div>
       </main>
 
       <footer>
-        © 2025 — Caux Wedrik-Odal — Champions League 2025–2026 Prediction
+        © 2025 – Caux Wedrik-Odal – Champions League 2025–2026 Prediction
       </footer>
     </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script>
-      const winnerData    = {{ winner_data | tojson }};
-      const topScorerData = {{ top_scorer_data | tojson }};
-      const topAssistData = {{ top_assist_data | tojson }};
-      const mvpData       = {{ mvp_data | tojson }};
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+  const winnerData    = {{ winner_data | tojson }};
+  const topScorerData = {{ top_scorer_data | tojson }};
+  const topAssistData = {{ top_assist_data | tojson }};
+  const mvpData       = {{ mvp_data | tojson }};
 
-      function renderBarChart({
-          containerId,
-          data,
-          yKey,
-          valueKey,
-          logoKey,
-          leftLabel,
-          rightLabel,
-          gradientId,
-          isPercent = true
-        }) {
-          const margin = { top: 20, right: 120, bottom: 40, left: 385 },
-                width  = 1200 - margin.left - margin.right,
-                height = 600 - margin.top - margin.bottom;
+  let currentChart = 'winner';
+  
+  // Initial display: top 20 for teams, top 10 for players
+  let filteredData = {
+    winner: winnerData.slice(0, 20),
+    top_scorer: topScorerData.slice(0, 10),
+    top_assist: topAssistData.slice(0, 10),
+    mvp: mvpData.slice(0, 10)
+  };
 
-          const container = d3.select(containerId);
-          container.selectAll("*").remove();
+  // DOM elements
+  const teamSlider = document.getElementById('team-slider');
+  const sliderValue = document.getElementById('slider-value');
+  const playerSearch = document.getElementById('player-search');
+  const teamSearch = document.getElementById('team-search');
+  const winnerControls = document.getElementById('winner-controls');
+  const playerControls = document.getElementById('player-controls');
 
-          const svg = container
-            .append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-              .attr("transform", `translate(${margin.left},${margin.top})`);
+  // Slider management
+  teamSlider.addEventListener('input', (e) => {
+    const value = parseInt(e.target.value);
+    sliderValue.textContent = `Top ${value}`;
+    filteredData.winner = winnerData.slice(0, value);
+    showWinner();
+  });
 
-          container.select("svg")
-            .style("border-radius", "12px")
-            .style("background", "#07141f");
+  // Player search management
+  playerSearch.addEventListener('input', (e) => {
+    applyPlayerFilters();
+  });
 
-          const defs = svg.append("defs");
-          const gradient = defs.append("linearGradient")
-            .attr("id", gradientId)
-            .attr("x1", "0%").attr("x2", "100%")
-            .attr("y1", "0%").attr("y2", "0%");
-          gradient.append("stop").attr("offset", "0%").attr("stop-color", "#0b6d80");
-          gradient.append("stop").attr("offset", "100%").attr("stop-color", "#17c3b2");
+  // Team search management
+  teamSearch.addEventListener('input', (e) => {
+    applyPlayerFilters();
+  });
 
-          const maxVal = d3.max(data, d => d[valueKey]);
-          const x = d3.scaleLinear().domain([0, maxVal]).range([0, width]);
-          const y = d3.scaleBand().domain(data.map(d => d[yKey])).range([0, height]).padding(0.2);
+  function applyPlayerFilters() {
+    const playerTerm = playerSearch.value.toLowerCase().trim();
+    const teamTerm = teamSearch.value.toLowerCase().trim();
 
-          const logoSize = 22;
-          if (logoKey && data[0][logoKey]) {
-            svg.selectAll("image.logo")
-              .data(data)
-              .enter()
-              .append("image")
-                .attr("class", "logo")
-                .attr("href", d => `/static/images/logos/${d[logoKey]}`)
-                .attr("x", -logoSize - 20)
-                .attr("y", d => y(d[yKey]) + (y.bandwidth() - logoSize) / 2)
-                .attr("width", logoSize)
-                .attr("height", logoSize);
-          }
+    const hasActiveFilter = playerTerm !== '' || teamTerm !== '';
 
-          const xAxis = d3.axisBottom(x)
-            .ticks(6)
-            .tickFormat(d => isPercent ? d + "%" : d);
+    let sourceData;
+    let valueKey;
+    if (currentChart === 'top_scorer') {
+      sourceData = topScorerData;
+      valueKey = 'prob';
+    } else if (currentChart === 'top_assist') {
+      sourceData = topAssistData;
+      valueKey = 'prob';
+    } else if (currentChart === 'mvp') {
+      sourceData = mvpData;
+      valueKey = 'score';
+    }
 
-          svg.selectAll("rect")
-            .data(data)
-            .enter()
-            .append("rect")
-              .attr("y", d => y(d[yKey]))
-              .attr("height", y.bandwidth())
-              .attr("x", 0)
-              .attr("width", d => x(d[valueKey]))
-              .attr("fill", `url(#${gradientId})`)
-              .attr("rx", 4).attr("ry", 4);
+    if (hasActiveFilter) {
+      // Apply filters to ALL data
+      filteredData[currentChart] = sourceData.filter(d => {
+        const playerMatch = !playerTerm || d.player.toLowerCase().includes(playerTerm);
+        const teamMatch = !teamTerm || d.team.toLowerCase().includes(teamTerm);
+        return playerMatch && teamMatch;
+      });
+      
+      // Sort filtered data by value (descending)
+      filteredData[currentChart].sort((a, b) => b[valueKey] - a[valueKey]);
+    } else {
+      // No filters: show top 10 (already sorted)
+      filteredData[currentChart] = sourceData.slice(0, 10);
+    }
 
-          svg.selectAll("text.left-label")
-            .data(data)
-            .enter()
-            .append("text")
-              .attr("class", "left-label")
-              .attr("x", -logoSize - 60)
-              .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
-              .attr("dy", "0.35em")
-              .attr("text-anchor", "end")
-              .attr("fill", "#eaf6f9")
-              .style("font-size", "12px")
-              .text(leftLabel);
+    // Re-render
+    if (currentChart === 'top_scorer') showTopScorer();
+    else if (currentChart === 'top_assist') showTopAssist();
+    else if (currentChart === 'mvp') showMVP();
+  }
 
-          svg.selectAll("text.right-label")
-            .data(data)
-            .enter()
-            .append("text")
-              .attr("class", "right-label")
-              .attr("x", d => x(d[valueKey]) + 6)
-              .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
-              .attr("dy", "0.35em")
-              .attr("fill", "#eaf6f9")
-              .style("font-size", "11px")
-              .text(rightLabel);
+  function resetFilters() {
+    // Reset slider
+    teamSlider.value = 20;
+    sliderValue.textContent = 'Top 20';
+    
+    // Reset search fields
+    playerSearch.value = '';
+    teamSearch.value = '';
+    
+    // Reset filtered data to initial top values
+    filteredData = {
+      winner: winnerData.slice(0, 20),
+      top_scorer: topScorerData.slice(0, 10),
+      top_assist: topAssistData.slice(0, 10),
+      mvp: mvpData.slice(0, 10)
+    };
+  }
 
-          svg.append("g")
-            .attr("transform", `translate(0,${height})`)
-            .call(xAxis)
-            .selectAll("text")
-              .style("fill", "#9fb3c3")
-              .style("font-size", "11px");
+  function showControls(chartType) {
+    if (chartType === 'winner') {
+      winnerControls.style.display = 'block';
+      playerControls.style.display = 'none';
+    } else {
+      winnerControls.style.display = 'none';
+      playerControls.style.display = 'block';
+    }
+  }
 
-          svg.append("g")
-            .attr("class", "grid")
-            .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""))
-            .selectAll("line")
-              .attr("stroke", "#1f2a36")
-              .attr("stroke-dasharray", "2,2");
-        }
+  function renderBarChart({
+      containerId,
+      data,
+      yKey,
+      valueKey,
+      logoKey,
+      leftLabel,
+      rightLabel,
+      gradientId,
+      isPercent = true
+    }) {
+      const container = d3.select(containerId);
+      container.selectAll("*").remove();
 
-          function showWinner() {
-          renderBarChart({
-          containerId: "#results-chart",
-          data: winnerData,
-          yKey: "team",
-          valueKey: "prob",
-          logoKey: "logo",
-          gradientId: "winnerGradient",
-          leftLabel: d => `${d.rank}. ${d.team}`,
-          rightLabel: d => `${d.prob}%`
-              });
-              }
+      if (data.length === 0) {
+        container.append("div")
+          .attr("class", "no-results")
+          .text("No results found. Try adjusting your filters.");
+        return;
+      }
 
-          function showTopScorer() {
-          renderBarChart({
-          containerId: "#results-chart",
-          data: topScorerData,
-          yKey: "player",
-          valueKey: "prob",
-          logoKey: "logo",
-          gradientId: "scorerGradient",
-          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
-          rightLabel: d => `${d.prob}% – ${d.goals.toFixed(1)} goals`
-          });
-          }
+      const margin = { top: 20, right: 120, bottom: 40, left: 385 };
+      const barHeight = 30;
+      const height = Math.max(400, data.length * barHeight + margin.top + margin.bottom);
+      const width = 1200 - margin.left - margin.right;
 
-          function showTopAssist() {
-          renderBarChart({
-          containerId: "#results-chart",
-          data: topAssistData,
-          yKey: "player",
-          valueKey: "prob",
-          logoKey: "logo",
-          gradientId: "assistGradient",
-          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
-          rightLabel: d => `${d.prob}% – ${d.assists.toFixed(1)} assists`
-          });
-          }
+      const svg = container
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height)
+        .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
 
-          function showMVP() {
-          renderBarChart({
-          containerId: "#results-chart",
-          data: mvpData,
-          yKey: "player",
-          valueKey: "score",
-          logoKey: "logo",
-          gradientId: "mvpGradient",
-          isPercent: false,
-          leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
-          rightLabel: d => d.score.toFixed(3)
-                      });
-                    }
-                    document.querySelectorAll(".results-switch button").forEach(btn => {
-                      btn.addEventListener("click", () => {
-                        document.querySelectorAll(".results-switch button").forEach(b => b.classList.remove("active"));
-                        btn.classList.add("active");
+      container.select("svg")
+        .style("border-radius", "12px")
+        .style("background", "#07141f");
 
-                        const chartType = btn.dataset.chart;
-                        if (chartType === "winner")      showWinner();
-                        else if (chartType === "top_scorer") showTopScorer();
-                        else if (chartType === "top_assist") showTopAssist();
-                        else if (chartType === "mvp")    showMVP();
-                      });
-                    });
-                    showWinner();
-    </script>
+      const defs = svg.append("defs");
+      const gradient = defs.append("linearGradient")
+        .attr("id", gradientId)
+        .attr("x1", "0%").attr("x2", "100%")
+        .attr("y1", "0%").attr("y2", "0%");
+      gradient.append("stop").attr("offset", "0%").attr("stop-color", "#0b6d80");
+      gradient.append("stop").attr("offset", "100%").attr("stop-color", "#17c3b2");
+
+      const maxVal = d3.max(data, d => d[valueKey]);
+      const x = d3.scaleLinear().domain([0, maxVal]).range([0, width]);
+      const y = d3.scaleBand()
+        .domain(data.map(d => d[yKey]))
+        .range([0, height - margin.top - margin.bottom])
+        .padding(0.2);
+
+      const logoSize = 22;
+      if (logoKey && data[0][logoKey]) {
+        svg.selectAll("image.logo")
+          .data(data)
+          .enter()
+          .append("image")
+            .attr("class", "logo")
+            .attr("href", d => `/static/images/logos/${d[logoKey]}`)
+            .attr("x", -logoSize - 20)
+            .attr("y", d => y(d[yKey]) + (y.bandwidth() - logoSize) / 2)
+            .attr("width", logoSize)
+            .attr("height", logoSize);
+      }
+
+      const xAxis = d3.axisBottom(x)
+        .ticks(6)
+        .tickFormat(d => isPercent ? d + "%" : d);
+
+      svg.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+          .attr("y", d => y(d[yKey]))
+          .attr("height", y.bandwidth())
+          .attr("x", 0)
+          .attr("width", d => x(d[valueKey]))
+          .attr("fill", `url(#${gradientId})`)
+          .attr("rx", 4).attr("ry", 4);
+
+      svg.selectAll("text.left-label")
+        .data(data)
+        .enter()
+        .append("text")
+          .attr("class", "left-label")
+          .attr("x", -logoSize - 60)
+          .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", "end")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "12px")
+          .text(d => leftLabel(d));
+
+      svg.selectAll("text.right-label")
+        .data(data)
+        .enter()
+        .append("text")
+          .attr("class", "right-label")
+          .attr("x", d => x(d[valueKey]) + 6)
+          .attr("y", d => y(d[yKey]) + y.bandwidth() / 2)
+          .attr("dy", "0.35em")
+          .attr("fill", "#eaf6f9")
+          .style("font-size", "11px")
+          .text(d => rightLabel(d));
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
+        .call(xAxis)
+        .selectAll("text")
+          .style("fill", "#9fb3c3")
+          .style("font-size", "11px");
+
+      svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
+        .call(d3.axisBottom(x).ticks(6).tickSize(-(height - margin.top - margin.bottom)).tickFormat(""))
+        .selectAll("line")
+          .attr("stroke", "#1f2a36")
+          .attr("stroke-dasharray", "2,2");
+    }
+
+  function showWinner() {
+    renderBarChart({
+      containerId: "#results-chart",
+      data: filteredData.winner,
+      yKey: "team",
+      valueKey: "prob",
+      logoKey: "logo",
+      gradientId: "winnerGradient",
+      leftLabel: d => `${d.rank}. ${d.team}`,
+      rightLabel: d => `${d.prob}%`
+    });
+  }
+
+  function showTopScorer() {
+    renderBarChart({
+      containerId: "#results-chart",
+      data: filteredData.top_scorer,
+      yKey: "player",
+      valueKey: "prob",
+      logoKey: "logo",
+      gradientId: "scorerGradient",
+      leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+      rightLabel: d => `${d.prob}% – ${d.goals.toFixed(1)} goals`
+    });
+  }
+
+  function showTopAssist() {
+    renderBarChart({
+      containerId: "#results-chart",
+      data: filteredData.top_assist,
+      yKey: "player",
+      valueKey: "prob",
+      logoKey: "logo",
+      gradientId: "assistGradient",
+      leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+      rightLabel: d => `${d.prob}% – ${d.assists.toFixed(1)} assists`
+    });
+  }
+
+  function showMVP() {
+    renderBarChart({
+      containerId: "#results-chart",
+      data: filteredData.mvp,
+      yKey: "player",
+      valueKey: "score",
+      logoKey: "logo",
+      gradientId: "mvpGradient",
+      isPercent: false,
+      leftLabel: d => `${d.rank}. ${d.player} (${d.team})`,
+      rightLabel: d => d.score.toFixed(3)
+    });
+  }
+
+  // Tab buttons management
+  document.querySelectorAll(".results-switch button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".results-switch button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const chartType = btn.dataset.chart;
+      currentChart = chartType;
+      
+      // Reset filters
+      resetFilters();
+      
+      // Show appropriate controls
+      showControls(chartType);
+
+      // Display chart
+      if (chartType === "winner") showWinner();
+      else if (chartType === "top_scorer") showTopScorer();
+      else if (chartType === "top_assist") showTopAssist();
+      else if (chartType === "mvp") showMVP();
+    });
+  });
+
+  // Initialization - show Winner chart on page load
+  showWinner();
+</script>
   </body>
 </html>
