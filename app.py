@@ -7,11 +7,11 @@ app = Flask(__name__)
 # Base directory of the project
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# File paths to the CSV result files used in the application
-WINNER_CSV     = os.path.join(BASE_DIR, "static/data/results/ucl_winner_top20.csv")
-TOP_SCORER_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_scorer_top10.csv")
-TOP_ASSIST_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_assist_top10.csv")
-MVP_CSV        = os.path.join(BASE_DIR, "static/data/results/ucl_mvp_top10.csv")
+# Path to the first CSV (winning team prediction)
+WINNER_CSV     = os.path.join(BASE_DIR, "static/data/results/ucl_winner_all.csv")
+TOP_SCORER_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_scorer_all.csv")
+TOP_ASSIST_CSV = os.path.join(BASE_DIR, "static/data/results/ucl_top_assist_all.csv")
+MVP_CSV        = os.path.join(BASE_DIR, "static/data/results/ucl_mvp_all.csv")
 
 def load_win_probabilities(top_n=20):
     df = pd.read_csv(WINNER_CSV)
@@ -34,7 +34,7 @@ def get_top_favorite():
     data = load_win_probabilities(top_n=1)
     return data[0]
 
-def load_winner_data(top_n=20):
+def load_winner_data(top_n=34):
     df = pd.read_csv(WINNER_CSV)
     df["Win_Probability"] = pd.to_numeric(df["Win_Probability"])
     df["Win_Probability_pct"] = df["Win_Probability"] * 100
@@ -45,7 +45,7 @@ def load_winner_data(top_n=20):
             "team": row["Team"],
             "prob": round(row["Win_Probability_pct"], 1),
             "rank": rank,
-            "logo": row.get("LogoFile", None), # Use .get() to avoid errors if the logo column is missing
+            "logo": row.get("LogoFile", None),
         })
     return data
 
@@ -109,7 +109,6 @@ def load_mvp_data(top_n=10):
 
 @app.route("/")
 def index():
-    # Home page: displays the main favorite and the top winning probabilities
     favorite = get_top_favorite()
     win_data = load_win_probabilities(top_n=20)
     return render_template("index.html", favorite=favorite, win_data=win_data)
@@ -120,11 +119,10 @@ def method():
 
 @app.route("/results")
 def results():
-    # aggregates all computed rankings (teams, scorers, assists, MVP)
-    winner_data     = load_winner_data(top_n=20)
-    top_scorer_data = load_top_scorer_data(top_n=10)
-    top_assist_data = load_top_assist_data(top_n=10)
-    mvp_data        = load_mvp_data(top_n=10)
+    winner_data     = load_winner_data(top_n=33)
+    top_scorer_data = load_top_scorer_data(top_n=999)
+    top_assist_data = load_top_assist_data(top_n=999)
+    mvp_data        = load_mvp_data(top_n=999)
 
     return render_template(
         "results.html",
