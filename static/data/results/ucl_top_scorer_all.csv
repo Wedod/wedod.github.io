@@ -6,7 +6,7 @@ Harry Kane,Bayern Munich,"FW,MF",5,9.047608880689001,0.04657333333333332,Bayern 
 Gabriel Martinelli,Arsenal,FW,5,8.824067899889767,0.04095666666666665,Arsenal.png
 Anthony Gordon,Newcastle Utd,FW,5,8.444012459099369,0.03229833333333333,Newcastle Utd.png
 Lautaro Martínez,Inter,FW,4,7.348784381687755,0.012936666666666664,Inter.png
-Julián Álvarez,Atlético Madrid,FW,4,7.15863071299426,0.011833333333333333,Atlético Madrid.png
+Julián Álvarez,Atletico Madrid,FW,4,7.15863071299426,0.011833333333333333,Atletico Madrid.png
 Dušan Vlahović,Juventus,FW,3,6.708676219828934,0.006566666666666669,Juventus.png
 Noni Madueke,Arsenal,FW,3,6.236227066763776,0.004258333333333334,Arsenal.png
 Luis Díaz,Bayern Munich,FW,3,6.094138955373751,0.0032533333333333333,Bayern Munich.png
@@ -29,7 +29,7 @@ Dominik Szoboszlai,Liverpool,"MF,DF",3,4.928891091394751,0.00035833333333333333,
 Mason Greenwood,Marseille,"FW,MF",3,4.825780461917074,0.000325,Marseille.png
 Ricardo Pepi,PSV Eindhoven,FW,3,3.4597261882906967,0.000225,PSV Eindhoven.png
 Rasmus Højlund,Napoli,FW,2,3.55020421117783,0.000225,Napoli.png
-Marcos Llorente,Atlético Madrid,"DF,MF",3,4.466816616089639,0.0002,Atlético Madrid.png
+Marcos Llorente,Atletico Madrid,"DF,MF",3,4.466816616089639,0.0002,Atletico Madrid.png
 Álex Grimaldo,Leverkusen,DF,3,4.26902155190729,0.0002,Leverkusen.png
 Karim Adeyemi,Dortmund,MF,2,3.963503409226691,0.00018333333333333334,Dortmund.png
 Viktor Dadason,FC Copenhagen,FW,2,3.177786402678353,0.000175,FC Copenhagen.png
@@ -340,17 +340,17 @@ David Goldar,Pafos FC,DF,0,0.13167959732967002,0.0,Pafos FC.png
 Couhaib Driouech,PSV Eindhoven,"MF,FW",3,3.3074687806173837,0.0,PSV Eindhoven.png
 Sergiño Dest,PSV Eindhoven,DF,0,0.28418163531396945,0.0,PSV Eindhoven.png
 Joey Veerman,PSV Eindhoven,MF,0,0.14135060717037076,0.0,PSV Eindhoven.png
-Emmanuel Addai,Qarabağ,FW,1,1.386009641423891,0.0,Qarabağ.png
-Kevin Medina,Qarabağ,DF,0,0.09173107348028586,0.0,Qarabağ.png
-Camilo Marques,Qarabağ,FW,2,2.6750940263678245,0.0,Qarabağ.png
-Mateusz Kochalski,Qarabağ,GK,0,0.15925539844894654,0.0,Qarabağ.png
-Oleksii Kashchuk,Qarabağ,"FW,MF",1,1.1088074272630748,0.0,Qarabağ.png
-Elvin Cəfərquliyev,Qarabağ,DF,0,0.10391460104617639,0.0,Qarabağ.png
-Pedro Bicalho,Qarabağ,MF,0,0.091012412592538,0.0,Qarabağ.png
-Toral Bayramov,Qarabağ,"DF,FW",0,0.022177788821038484,0.0,Qarabağ.png
-Leandro Andrade,Qarabağ,"FW,MF",3,3.492296874384422,0.0,Qarabağ.png
+Emmanuel Addai,Qarabag,FW,1,1.386009641423891,0.0,Qarabag.png
+Kevin Medina,Qarabag,DF,0,0.09173107348028586,0.0,Qarabag.png
+Camilo Marques,Qarabag,FW,2,2.6750940263678245,0.0,Qarabag.png
+Mateusz Kochalski,Qarabag,GK,0,0.15925539844894654,0.0,Qarabag.png
+Oleksii Kashchuk,Qarabag,"FW,MF",1,1.1088074272630748,0.0,Qarabag.png
+Elvin Cəfərquliyev,Qarabag,DF,0,0.10391460104617639,0.0,Qarabag.png
+Pedro Bicalho,Qarabag,MF,0,0.091012412592538,0.0,Qarabag.png
+Toral Bayramov,Qarabag,"DF,FW",0,0.022177788821038484,0.0,Qarabag.png
+Leandro Andrade,Qarabag,"FW,MF",3,3.492296874384422,0.0,Qarabag.png
 Antonio Rüdiger,Real Madrid,DF,0,1.0510358466514282,0.0,Real Madrid.png
-Matheus Silva,Qarabağ,DF,1,1.317063066073472,0.0,Qarabağ.png
+Matheus Silva,Qarabag,DF,1,1.317063066073472,0.0,Qarabag.png
 Ferland Mendy,Real Madrid,DF,0,1.013912981352231,0.0,Real Madrid.png
 Andriy Lunin,Real Madrid,GK,0,1.1145303001123759,0.0,Real Madrid.png
 Endrick,Real Madrid,FW,0,0.04813175709094267,0.0,Real Madrid.png
@@ -359,8 +359,8 @@ David Alaba,Real Madrid,DF,0,0.9287752500936465,0.0,Real Madrid.png
 Éder Militão,Real Madrid,DF,0,0.43544867604978926,0.0,Real Madrid.png
 Franco Mastantuono,Real Madrid,FW,0,0.5957393849670801,0.0,Real Madrid.png
 Dean Huijsen,Real Madrid,DF,0,0.39353717456541254,0.0,Real Madrid.png
-Bəhlul Mustafazadə,Qarabağ,DF,0,0.15925539844894654,0.0,Qarabağ.png
-Abdellah Zoubir,Qarabağ,"MF,FW",1,1.426863757264722,0.0,Qarabağ.png
+Bəhlul Mustafazadə,Qarabag,DF,0,0.15925539844894654,0.0,Qarabag.png
+Abdellah Zoubir,Qarabag,"MF,FW",1,1.426863757264722,0.0,Qarabag.png
 Guus Til,PSV Eindhoven,"FW,MF",2,3.0508406881670442,0.0,PSV Eindhoven.png
 Ofri Arad,Qaırat Almaty,MF,1,1.0,0.0,
 Jerdy Schouten,PSV Eindhoven,"DF,MF",0,0.23121182700769558,0.0,PSV Eindhoven.png
@@ -372,29 +372,29 @@ Matej Kovar,PSV Eindhoven,GK,0,0.235587227280971,0.0,PSV Eindhoven.png
 Yarek Gasiorowski,PSV Eindhoven,DF,0,0.129771695737282,0.0,PSV Eindhoven.png
 Olzhas Baibek,Qaırat Almaty,MF,1,1.0,0.0,
 Dastan Satpayev,Qaırat Almaty,FW,1,1.0,0.0,
-Nəriman Axundzadə,Qarabağ,FW,0,0.02937191208095252,0.0,Qarabağ.png
+Nəriman Axundzadə,Qarabag,FW,0,0.02937191208095252,0.0,Qarabag.png
 Edimilson Filho,Qaırat Almaty,FW,1,1.0,0.0,
-Joni Montiel,Qarabağ,MF,0,0.017537729697933466,0.0,Qarabağ.png
-Samy Mmaee,Qarabağ,DF,0,0.07296372207527722,0.0,Qarabağ.png
-Chriso,Qarabağ,MF,0,0.004417233664566784,0.0,Qarabağ.png
-Musa Qurbanlı,Qarabağ,FW,0,0.0036712628016408646,0.0,Qarabağ.png
-Kady Borges,Qarabağ,"MF,FW",0,0.17518399266632204,0.0,Qarabağ.png
-Dani Bolt,Qarabağ,"DF,FW",0,0.017191807184853084,0.0,Qarabağ.png
-Marko Janković,Qarabağ,MF,1,2.630147189590528,0.0,Qarabağ.png
+Joni Montiel,Qarabag,MF,0,0.017537729697933466,0.0,Qarabag.png
+Samy Mmaee,Qarabag,DF,0,0.07296372207527722,0.0,Qarabag.png
+Chriso,Qarabag,MF,0,0.004417233664566784,0.0,Qarabag.png
+Musa Qurbanlı,Qarabag,FW,0,0.0036712628016408646,0.0,Qarabag.png
+Kady Borges,Qarabag,"MF,FW",0,0.17518399266632204,0.0,Qarabag.png
+Dani Bolt,Qarabag,"DF,FW",0,0.017191807184853084,0.0,Qarabag.png
+Marko Janković,Qarabag,MF,1,2.630147189590528,0.0,Qarabag.png
 Claudio Echeverri,Leverkusen,MF,0,0.13419994756293432,0.0,Leverkusen.png
 Weston McKennie,Juventus,"DF,MF",2,2.7753474455241265,0.0,Juventus.png
 Edmond Tapsoba,Leverkusen,DF,0,0.2350222445389648,0.0,Leverkusen.png
 Roony Bardghji,Barcelona,FW,0,0.04064951956079344,0.0,Barcelona.png
-Antoine Griezmann,Atlético Madrid,FW,1,1.8007940119955683,0.0,Atlético Madrid.png
-Conor Gallagher,Atlético Madrid,MF,1,1.4685164702851765,0.0,Atlético Madrid.png
-Pablo Barrios,Atlético Madrid,MF,0,0.21200092903276183,0.0,Atlético Madrid.png
+Antoine Griezmann,Atletico Madrid,FW,1,1.8007940119955683,0.0,Atletico Madrid.png
+Conor Gallagher,Atletico Madrid,MF,1,1.4685164702851765,0.0,Atletico Madrid.png
+Pablo Barrios,Atletico Madrid,MF,0,0.21200092903276183,0.0,Atletico Madrid.png
 Pedro Fernandez,Barcelona,FW,0,0.7726382128300051,0.0,Barcelona.png
 Marc Bernal,Barcelona,MF,0,0.060334916863940415,0.0,Barcelona.png
 Wojciech Szczęsny,Barcelona,GK,0,0.6709970924056344,0.0,Barcelona.png
 Raphinha,Barcelona,"FW,MF",0,0.6220474395916701,0.0,Barcelona.png
 Joan García,Barcelona,GK,0,0.6709970924056344,0.0,Barcelona.png
 Pedri,Barcelona,MF,0,0.2669024114332143,0.0,Barcelona.png
-Giuliano Simeone,Atlético Madrid,MF,1,1.8187587038866617,0.0,Atlético Madrid.png
+Giuliano Simeone,Atletico Madrid,MF,1,1.8187587038866617,0.0,Atletico Madrid.png
 Dani Olmo,Barcelona,"MF,FW",0,0.09057977627495825,0.0,Barcelona.png
 Andreas Christensen,Barcelona,"DF,MF",0,0.7290282373141309,0.0,Barcelona.png
 Marc Casado,Barcelona,MF,0,0.3270940978458387,0.0,Barcelona.png
@@ -403,28 +403,28 @@ Lamine Yamal,Barcelona,FW,2,3.1891017084518385,0.0,Barcelona.png
 Robert Lewandowski,Barcelona,FW,0,2.3461430383887945,0.0,Barcelona.png
 Alejandro Balde,Barcelona,DF,0,0.1935452720514013,0.0,Barcelona.png
 Gerard Martín,Barcelona,DF,0,0.22357927792537796,0.0,Barcelona.png
-Koke,Atlético Madrid,MF,0,0.18966584247968876,0.0,Atlético Madrid.png
-Nicolás González,Atlético Madrid,"MF,DF",0,0.17687395294079516,0.0,Atlético Madrid.png
+Koke,Atletico Madrid,MF,0,0.18966584247968876,0.0,Atletico Madrid.png
+Nicolás González,Atletico Madrid,"MF,DF",0,0.17687395294079516,0.0,Atletico Madrid.png
 Frenkie de Jong,Barcelona,MF,0,0.19925729474078274,0.0,Barcelona.png
-Clément Lenglet,Atlético Madrid,DF,0,0.7777661752171219,0.0,Atlético Madrid.png
+Clément Lenglet,Atletico Madrid,DF,0,0.7777661752171219,0.0,Atletico Madrid.png
 Unai Simón,Athletic Club,GK,0,0.13127359118132853,0.0,Athletic Club.png
 Alejandro Rego,Athletic Club,MF,0,0.10168482970159237,0.0,Athletic Club.png
 Mikel Jauregizar,Athletic Club,MF,0,0.06686367737869132,0.0,Athletic Club.png
-Juan Musso,Atlético Madrid,GK,0,1.1129559756596923,0.0,Atlético Madrid.png
-Carlos Martín,Atlético Madrid,FW,0,0.0060443161881213545,0.0,Atlético Madrid.png
-Javi Galán,Atlético Madrid,DF,0,0.9406951229825864,0.0,Atlético Madrid.png
-Johnny Cardoso,Atlético Madrid,MF,0,0.7673510147561489,0.0,Atlético Madrid.png
-Giacomo Raspadori,Atlético Madrid,"MF,FW",1,2.8038327621785513,0.0,Atlético Madrid.png
-Marc Pubill,Atlético Madrid,DF,0,0.4189485027036619,0.0,Atlético Madrid.png
-Robin Le Normand,Atlético Madrid,DF,1,1.9226829602779192,0.0,Atlético Madrid.png
-José María Giménez,Atlético Madrid,DF,1,2.7097973009063363,0.0,Atlético Madrid.png
-Thiago Almada,Atlético Madrid,MF,0,0.07637263730322583,0.0,Atlético Madrid.png
-Dávid Hancko,Atlético Madrid,DF,1,2.488421437566708,0.0,Atlético Madrid.png
-Alex Baena,Atlético Madrid,MF,0,0.18308051255146557,0.0,Atlético Madrid.png
-Alexander Sørloth,Atlético Madrid,FW,1,1.7612923070188038,0.0,Atlético Madrid.png
-Matteo Ruggeri,Atlético Madrid,DF,0,0.21676862898536772,0.0,Atlético Madrid.png
-Jan Oblak,Atlético Madrid,GK,0,0.407379484468737,0.0,Atlético Madrid.png
-Nahuel Molina,Atlético Madrid,DF,0,0.37217118068354554,0.0,Atlético Madrid.png
+Juan Musso,Atletico Madrid,GK,0,1.1129559756596923,0.0,Atletico Madrid.png
+Carlos Martín,Atletico Madrid,FW,0,0.0060443161881213545,0.0,Atletico Madrid.png
+Javi Galán,Atletico Madrid,DF,0,0.9406951229825864,0.0,Atletico Madrid.png
+Johnny Cardoso,Atletico Madrid,MF,0,0.7673510147561489,0.0,Atletico Madrid.png
+Giacomo Raspadori,Atletico Madrid,"MF,FW",1,2.8038327621785513,0.0,Atletico Madrid.png
+Marc Pubill,Atletico Madrid,DF,0,0.4189485027036619,0.0,Atletico Madrid.png
+Robin Le Normand,Atletico Madrid,DF,1,1.9226829602779192,0.0,Atletico Madrid.png
+José María Giménez,Atletico Madrid,DF,1,2.7097973009063363,0.0,Atletico Madrid.png
+Thiago Almada,Atletico Madrid,MF,0,0.07637263730322583,0.0,Atletico Madrid.png
+Dávid Hancko,Atletico Madrid,DF,1,2.488421437566708,0.0,Atletico Madrid.png
+Alex Baena,Atletico Madrid,MF,0,0.18308051255146557,0.0,Atletico Madrid.png
+Alexander Sørloth,Atletico Madrid,FW,1,1.7612923070188038,0.0,Atletico Madrid.png
+Matteo Ruggeri,Atletico Madrid,DF,0,0.21676862898536772,0.0,Atletico Madrid.png
+Jan Oblak,Atletico Madrid,GK,0,0.407379484468737,0.0,Atletico Madrid.png
+Nahuel Molina,Atletico Madrid,DF,0,0.37217118068354554,0.0,Atletico Madrid.png
 Jules Koundé,Barcelona,DF,2,3.212641367590236,0.0,Barcelona.png
 Eric García,Barcelona,"DF,MF",0,0.20125450635502734,0.0,Barcelona.png
 Haitam Aleesami,Bodø/Glimt,DF,1,1.0,0.0,Bodø/Glimt.png
