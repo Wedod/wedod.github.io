@@ -42,7 +42,7 @@ Anthony Gordon,Newcastle Utd,FW,2,2.893046332041693,0.004271349206349206,Newcast
 Ibrahim Maza,Leverkusen,MF,2,2.946989606756623,0.003825,Leverkusen.png
 Jobe Bellingham,Dortmund,MF,2,2.7820454428603605,0.003014166666666666,Dortmund.png
 Carlos Forbs,Club Brugge,"FW,MF",2,2.681987768022389,0.002739285714285714,Club Brugge.png
-Marko Janković,Qarabağ,MF,2,2.7091734803955596,0.0026645238095238093,Qarabağ.png
+Marko Janković,Qarabag,MF,2,2.7091734803955596,0.0026645238095238093,Qarabag.png
 Bukayo Saka,Arsenal,FW,1,2.711039555171186,0.002638571428571428,Arsenal.png
 Wesley Fofana,Chelsea,DF,1,2.645714593192092,0.002304166666666666,Chelsea.png
 Mohamed Salah,Liverpool,FW,1,2.6804144375966867,0.0022612301587301587,Liverpool.png
@@ -179,7 +179,7 @@ George Ilenikhena,Monaco,FW,0,0.013804594196607761,0.0,Monaco.png
 Lukáš Hrádecký,Monaco,GK,0,0.43238527799719706,0.0,Monaco.png
 Lamine Camara,Monaco,MF,0,0.4891322087069926,0.0,Monaco.png
 Pape Cabral,Monaco,MF,0,0.013804594196607761,0.0,Monaco.png
-Camilo Marques,Qarabağ,FW,1,1.2663850595441488,0.0,Qarabağ.png
+Camilo Marques,Qarabag,FW,1,1.2663850595441488,0.0,Qarabag.png
 Antonio Vergara,Napoli,MF,0,0.004223338470030878,0.0,Napoli.png
 Mika Biereth,Monaco,FW,0,0.0615989516629392,0.0,Monaco.png
 Juan Jesus,Napoli,DF,0,0.19413517275895845,0.0,Napoli.png
@@ -287,10 +287,10 @@ Ruben van Bommel,PSV Eindhoven,"MF,FW",0,0.34034406602919065,0.0,PSV Eindhoven.p
 Georgios Vagiannidis,Sporting CP,DF,0,0.10412492812589527,0.0,Sporting CP.png
 Salvador Blopa,Sporting CP,"FW,DF",0,0.0067919776255848255,0.0,Sporting CP.png
 Willian Pacho,Paris S-G,DF,0,0.29354884652750973,0.0,Paris S-G.png
-Leandro Andrade,Qarabağ,"FW,MF",0,0.1245944152621801,0.0,Qarabağ.png
+Leandro Andrade,Qarabag,"FW,MF",0,0.1245944152621801,0.0,Qarabag.png
 Warren Zaïre-Emery,Paris S-G,"MF,DF",0,0.3892974180413948,0.0,Paris S-G.png
 Lucas Chevalier,Paris S-G,GK,0,0.22405566598290538,0.0,Paris S-G.png
-Emmanuel Addai,Qarabağ,FW,0,0.19275847792639422,0.0,Qarabağ.png
+Emmanuel Addai,Qarabag,FW,0,0.19275847792639422,0.0,Qarabag.png
 Lee Kang-in,Paris S-G,"FW,MF",0,0.058447585458816044,0.0,Paris S-G.png
 Zeno Debast,Sporting CP,"DF,MF",0,0.11333956920238446,0.0,Sporting CP.png
 Matheus Reis,Sporting CP,DF,0,0.07858493189932804,0.0,Sporting CP.png
@@ -313,34 +313,34 @@ Paul Wanner,PSV Eindhoven,MF,0,0.01184386188734767,0.0,PSV Eindhoven.png
 Armando Obispo,PSV Eindhoven,DF,0,0.15653410108741134,0.0,PSV Eindhoven.png
 Christos Zafeiris,Slavia Prague,MF,0,0.07931627711169628,0.0,Slavia Prague.png
 Ricardinho,Qaırat Almaty,"FW,MF",1,1.0,0.0,
-Kevin Medina,Qarabağ,DF,0,0.10497637767729429,0.0,Qarabağ.png
+Kevin Medina,Qarabag,DF,0,0.10497637767729429,0.0,Qarabag.png
 Youssoupha Mbodji,Slavia Prague,"DF,MF",0,0.06820566043384953,0.0,Slavia Prague.png
-Bəhlul Mustafazadə,Qarabağ,DF,0,0.08744474194956703,0.0,Qarabağ.png
-Matheus Silva,Qarabağ,DF,0,0.12453586988793101,0.0,Qarabağ.png
-Abdellah Zoubir,Qarabağ,"MF,FW",1,1.2764153110975607,0.0,Qarabağ.png
-Nəriman Axundzadə,Qarabağ,FW,1,1.0446083554599634,0.0,Qarabağ.png
-Mateusz Kochalski,Qarabağ,GK,0,0.08744474194956703,0.0,Qarabağ.png
-Dani Bolt,Qarabağ,"DF,FW",0,0.004796482768229115,0.0,Qarabağ.png
-Kady Borges,Qarabağ,"MF,FW",0,0.5385125453950163,0.0,Qarabağ.png
-Musa Qurbanlı,Qarabağ,FW,0,0.0006351828153599814,0.0,Qarabağ.png
-Chriso,Qarabağ,MF,0,0.0007276309532191016,0.0,Qarabağ.png
-Samy Mmaee,Qarabağ,DF,0,0.02035674504005998,0.0,Qarabağ.png
-Joni Montiel,Qarabağ,MF,0,0.004886921705355046,0.0,Qarabağ.png
+Bəhlul Mustafazadə,Qarabag,DF,0,0.08744474194956703,0.0,Qarabag.png
+Matheus Silva,Qarabag,DF,0,0.12453586988793101,0.0,Qarabag.png
+Abdellah Zoubir,Qarabag,"MF,FW",1,1.2764153110975607,0.0,Qarabag.png
+Nəriman Axundzadə,Qarabag,FW,1,1.0446083554599634,0.0,Qarabag.png
+Mateusz Kochalski,Qarabag,GK,0,0.08744474194956703,0.0,Qarabag.png
+Dani Bolt,Qarabag,"DF,FW",0,0.004796482768229115,0.0,Qarabag.png
+Kady Borges,Qarabag,"MF,FW",0,0.5385125453950163,0.0,Qarabag.png
+Musa Qurbanlı,Qarabag,FW,0,0.0006351828153599814,0.0,Qarabag.png
+Chriso,Qarabag,MF,0,0.0007276309532191016,0.0,Qarabag.png
+Samy Mmaee,Qarabag,DF,0,0.02035674504005998,0.0,Qarabag.png
+Joni Montiel,Qarabag,MF,0,0.004886921705355046,0.0,Qarabag.png
 Giorgi Zaria,Qaırat Almaty,"MF,FW",1,1.0,0.0,
 Ricardo Mangas,Sporting CP,MF,0,0.02291878570567989,0.0,Sporting CP.png
 Michal Sadílek,Slavia Prague,MF,0,0.08892804243645439,0.0,Slavia Prague.png
 Yarek Gasiorowski,PSV Eindhoven,DF,0,0.12068688604886854,0.0,PSV Eindhoven.png
 Matej Kovar,PSV Eindhoven,GK,0,0.12935740010598543,0.0,PSV Eindhoven.png
-Oleksii Kashchuk,Qarabağ,"FW,MF",0,0.005537151371765847,0.0,Qarabağ.png
+Oleksii Kashchuk,Qarabag,"FW,MF",0,0.005537151371765847,0.0,Qarabag.png
 Dennis Man,PSV Eindhoven,"MF,FW",0,0.15376777025933033,0.0,PSV Eindhoven.png
-Elvin Cəfərquliyev,Qarabağ,DF,0,0.1417669788638588,0.0,Qarabağ.png
-Pedro Bicalho,Qarabağ,MF,0,0.08464098897054527,0.0,Qarabağ.png
+Elvin Cəfərquliyev,Qarabag,DF,0,0.1417669788638588,0.0,Qarabag.png
+Pedro Bicalho,Qarabag,MF,0,0.08464098897054527,0.0,Qarabag.png
 Ismael Saibari,PSV Eindhoven,"FW,MF",0,0.14813661206468634,0.0,PSV Eindhoven.png
 Anass Salah-Eddine,PSV Eindhoven,DF,0,0.34395809625820173,0.0,PSV Eindhoven.png
 Jerdy Schouten,PSV Eindhoven,"DF,MF",0,0.1562228612784428,0.0,PSV Eindhoven.png
 João Virgínia,Sporting CP,GK,0,0.17890684760046033,0.0,Sporting CP.png
 Rodrigo Ribeiro,Sporting CP,FW,0,0.007027943666624173,0.0,Sporting CP.png
-Toral Bayramov,Qarabağ,"DF,FW",0,0.0036532469970041344,0.0,Qarabağ.png
+Toral Bayramov,Qarabag,"DF,FW",0,0.0036532469970041344,0.0,Qarabag.png
 Matvei Safonov,Paris S-G,GK,0,0.1835246188677006,0.0,Paris S-G.png
 David Goldar,Pafos FC,DF,0,0.07594173256492333,0.0,Pafos FC.png
 Ben Davies,Tottenham,DF,0,0.1762697432249483,0.0,Tottenham.png
